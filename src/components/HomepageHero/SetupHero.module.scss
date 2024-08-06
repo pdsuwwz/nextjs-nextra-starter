@@ -1,0 +1,150 @@
+.container {
+  position: relative;
+}
+
+.tilesGradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(229, 231, 235, 0),
+    rgba(229, 231, 235, 0.7)
+  );
+
+  :global(.dark) & {
+    background-image: linear-gradient(
+      180deg,
+      rgba(38, 38, 38, 0.1),
+      rgba(38, 38, 38, 0.7)
+    );
+  }
+}
+
+.tilesBackground {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  // background-image: url('~@/assets/images/hero-tile-light.svg');
+  background-image: url('data:image/svg+xml;base64,PHN2ZwogIHdpZHRoPSIxNDIiCiAgaGVpZ2h0PSI3MSIKICB2aWV3Qm94PSIwIDAgMTQyIDcxIgogIGZpbGw9Im5vbmUiCiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgo+CiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CiAgICA8cmVjdCB4PSIwLjUiIHk9IjAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZiIgLz4KICAgIDxyZWN0IHg9IjcxLjUiIHk9IjAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iI2ZmZiIgLz4KICA8L2c+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KICAgICAgPHJlY3Qgd2lkdGg9IjE0MiIgaGVpZ2h0PSI3MSIgZmlsbD0id2hpdGUiIC8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KPC9zdmc+');
+  background-position: calc(50% - 35.5px) bottom;
+  background-repeat: repeat;
+  background-size: 142px 71px;
+
+  :global(.dark) & {
+    // background-image: url('~@/assets/images/hero-tile-dark.svg');
+    background-image: url('data:image/svg+xml;base64,PHN2ZwogIHdpZHRoPSIxNDIiCiAgaGVpZ2h0PSI3MSIKICB2aWV3Qm94PSIwIDAgMTQyIDcxIgogIGZpbGw9Im5vbmUiCiAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIgo+CiAgPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwKSI+CiAgICA8cmVjdCB4PSIwLjUiIHk9IjAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iIzExMSIgLz4KICAgIDxyZWN0IHg9IjcxLjUiIHk9IjAiIHdpZHRoPSI3MCIgaGVpZ2h0PSI3MCIgZmlsbD0iIzExMSIgLz4KICA8L2c+CiAgPGRlZnM+CiAgICA8Y2xpcFBhdGggaWQ9ImNsaXAwIj4KICAgICAgPHJlY3Qgd2lkdGg9IjE0MiIgaGVpZ2h0PSI3MSIgZmlsbD0id2hpdGUiIC8+CiAgICA8L2NsaXBQYXRoPgogIDwvZGVmcz4KPC9zdmc+');
+  }
+}
+
+.content {
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  padding-bottom: 142px;
+  padding-left: max(env(safe-area-inset-left), 1.5rem);
+  padding-right: max(env(safe-area-inset-right), 1.5rem);
+  max-width: 90rem;
+  text-align: center;
+}
+
+.badgeContainer {
+  margin-top: 4rem;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  border-radius: 2em;
+  box-shadow: hsl(204 10% 75%) 0 0 0 1px inset;
+  background: rgba(255, 255, 255, 0.7);
+  color: hsl(204 20% 30%);
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition: all 0.2s ease;
+
+  &:hover {
+    box-shadow: 0 5px 22px -10px hsl(204 45% 20%);
+    box-shadow: hsl(204 20% 50%) 0 0 0 1px inset;
+  }
+
+  &:active {
+    box-shadow: hsl(204 10% 75%) 0 0 0 1px inset;
+  }
+
+  &:focus-visible {
+    outline: 2px solid
+      hsl(var(--nextra-primary-hue) var(--nextra-primary-saturation) 77%);
+    outline-offset: 2px;
+  }
+
+  :global(.dark) & {
+    background: rgba(17, 17, 17, 0.7);
+    color: hsl(204 10% 70%);
+    box-shadow: hsl(204 10% 25%) 0 0 0 1px inset;
+    text-shadow: 0 1px 1px #000;
+
+    &:hover {
+      background: rgba(17, 17, 17, 1);
+      box-shadow: hsl(204 10% 50%) 0 0 0 1px inset;
+    }
+
+    &:active {
+      box-shadow: hsl(204 10% 25%) 0 0 0 1px inset;
+    }
+  }
+}
+
+.headline {
+  margin-top: 1.5rem;
+  display: inline-flex;
+  background-image: linear-gradient(146deg, #000, #5e6265);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-size: 3.125rem;
+  font-size: min(4rem, max(8vw, 2.8rem));
+  font-weight: 700;
+  font-feature-settings: initial;
+  line-height: 1.05;
+  letter-spacing: -0.12rem;
+
+  :global(.dark) & {
+    background-image: linear-gradient(146deg, #fff, #81878b);
+  }
+}
+
+.subtitle {
+  margin-top: 1.25em;
+  color: hsl(204 20% 40%);
+  font-size: 1.3rem;
+  font-size: min(1.3rem, max(3.5vw, 1.1rem));
+  font-feature-settings: initial;
+  font-weight: 400;
+  line-height: 1.6;
+
+  br {
+    display: none;
+
+    @media (min-width: 810px) {
+      display: block;
+    }
+  }
+
+  :global(.dark) & {
+    color: hsl(204, 12%, 50%);
+  }
+}
+
+.actions {
+  margin-top: 1.6em;
+  margin-bottom: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-size: min(1.3rem, max(3.5vw, 1.1rem));
+  font-weight: 500;
+}

@@ -10,5 +10,8 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
-  reactStrictMode: true,
+  transpilePackages: [
+    '@nextui-org/react',
+    '@nextui-org/theme',
+  ],
 })

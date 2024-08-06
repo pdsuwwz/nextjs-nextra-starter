@@ -1,8 +1,18 @@
 {
   "name": "nextjs-nextra-starter",
+  "type": "module",
   "version": "0.0.1",
   "description": "Next.js Nextra docs starter",
-  "type": "module",
+  "author": "Wisdom <pdsu.wwz@foxmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/pdsuwwz/nextjs-nextra-starter#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdsuwwz/nextjs-nextra-starter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pdsuwwz/nextjs-nextra-starter/issues"
+  },
   "scripts": {
     "dev": "next dev -p 8000",
     "build": "next build",
@@ -10,17 +20,11 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pdsuwwz/nextjs-nextra-starter.git"
-  },
-  "author": "Wisdom <pdsu.wwz@foxmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pdsuwwz/nextjs-nextra-starter/issues"
-  },
-  "homepage": "https://github.com/pdsuwwz/nextjs-nextra-starter#readme",
   "dependencies": {
+    "@emotion/react": "^11.13.0",
+    "@emotion/styled": "^11.13.0",
+    "@nextui-org/react": "^2.4.6",
+    "framer-motion": "^11.3.21",
     "next": "14.2.5",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
@@ -38,6 +42,7 @@
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-react-refresh": "^0.4.9",
     "postcss": "^8.4.40",
+    "sass": "^1.77.8",
     "tailwindcss": "^3.4.7",
     "typescript": "^5.5.4"
   }

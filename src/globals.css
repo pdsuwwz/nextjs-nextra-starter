@@ -21,8 +21,12 @@ body {
   color: rgb(var(--foreground-rgb));
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+a,
+summary,
+button,
+input,
+[tabindex]:not([tabindex='-1']) {
+  &:focus-visible {
+    box-shadow: none;
   }
 }

@@ -20,7 +20,6 @@ const docsThemeConfig: DocsThemeConfig = {
       <span>🚀 My Nextra Starter</span>
     </>
   ),
-  primaryHue: 142, // hsl(141.89999999999998, 69.2%, 58%) --tw-green-400
   project: {
     link: repo,
   },
@@ -32,7 +31,11 @@ const docsThemeConfig: DocsThemeConfig = {
     },
   },
   sidebar: {
+    toggleButton: true,
     defaultMenuCollapseLevel: 1,
+  },
+  toc: {
+    backToTop: true,
   },
   useNextSeoProps() {
     const { asPath } = useRouter()
