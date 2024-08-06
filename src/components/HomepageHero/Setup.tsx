@@ -62,6 +62,7 @@ export function SetupHero(props: Props) {
                 target="_blank"
               >
                 Github
+                <span className="ml-[6px] icon-[mingcute--github-line]"></span>
               </Link>
             </Button>
           </div>
