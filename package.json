@@ -23,13 +23,18 @@
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
-    "@nextui-org/react": "^2.4.6",
+    "@radix-ui/react-slot": "^1.1.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
+    "lucide-react": "^0.424.0",
     "next": "14.2.5",
     "nextra": "^2.13.4",
     "nextra-theme-docs": "^2.13.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.24.1",
@@ -40,6 +45,7 @@
     "eslint": "^9.8.0",
     "eslint-config-next": "14.2.5",
     "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-react-refresh": "^0.4.9",
     "postcss": "^8.4.40",
     "sass": "^1.77.8",

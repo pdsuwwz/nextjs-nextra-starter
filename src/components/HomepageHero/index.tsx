@@ -19,7 +19,9 @@ export default function HomepageHero() {
           />
         </a>
       </div>
-      <div>232323</div>
+      <div className="h-[1000px] flex justify-center">
+        🚧 待完善
+      </div>
     </>
   )
 }
