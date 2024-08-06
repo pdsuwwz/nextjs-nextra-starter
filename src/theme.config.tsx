@@ -57,7 +57,6 @@ const docsThemeConfig: DocsThemeConfig = {
         description,
         url,
       },
-      themeColor: 'hsl(141.89999999999998, 69.2%, 58%)',
       title: asPath !== '/' ? `${pageTitle} - ${title}` : title,
     }
   },
