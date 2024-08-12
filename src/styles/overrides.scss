@@ -1,0 +1,9 @@
+a,
+summary,
+button,
+input,
+[tabindex]:not([tabindex='-1']) {
+  &:focus-visible {
+    box-shadow: none;
+  }
+}
