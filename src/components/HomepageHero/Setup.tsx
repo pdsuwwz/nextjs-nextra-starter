@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import styles from '@/components/HomepageHero/SetupHero.module.scss'
+import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
 
 interface Props {
 }
@@ -21,9 +22,9 @@ export function SetupHero(props: Props) {
           </a>
         </div>
         <h1 className={styles.headline}>
-          ⚡️
-          {' '}
-          <br className="sm:hidden"></br>
+          <MotionWrapperFlash>
+            <span className="icon-[emojione-v1--lightning-mood]"></span>
+          </MotionWrapperFlash>
           {' '}
           Nextra
           {' '}
