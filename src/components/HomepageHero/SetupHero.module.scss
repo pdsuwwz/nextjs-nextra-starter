@@ -99,7 +99,6 @@
 
 .headline {
   margin-top: 1.5rem;
-  display: inline-flex;
   background-image: linear-gradient(146deg, #000, #5e6265);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -114,6 +113,8 @@
   :global(.dark) & {
     background-image: linear-gradient(146deg, #fff, #81878b);
   }
+
+  @apply sm:inline-flex max-sm:flex max-sm:flex-col;
 }
 
 .subtitle {
