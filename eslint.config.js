@@ -38,6 +38,7 @@ export default antfu({
     'react-dom/no-missing-button-type': OFF,
     'react-hooks/exhaustive-deps': WARN,
     'react/no-useless-fragment': OFF,
+    'react/no-array-index-key': OFF,
 
     'unused-imports/no-unused-vars': WARN,
     curly: [ERROR, 'multi-line', 'consistent'],
