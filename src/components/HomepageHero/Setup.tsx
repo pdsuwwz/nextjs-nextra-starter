@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import { FlipWords } from '@/components/ui/flip-words'
 import { Button } from '@/components/ui/button'
 import styles from '@/components/HomepageHero/SetupHero.module.scss'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
+
 
 interface Props {
 }
@@ -35,9 +37,25 @@ export function SetupHero(props: Props) {
           {' '}
           Template
         </h1>
-        <p className={styles.subtitle}>
-          Next.js + Nextra + TypeScript + TailwindCSS + Shadcn UI
-        </p>
+        <div className={styles.subtitle}>
+          Template made
+          {' '}
+          <FlipWords
+            words={[
+              'Fast',
+              'Simple',
+              'Modern',
+              'Flexible',
+              'Easy',
+              'Functional',
+              'Efficient',
+              'Scalable',
+              'Reusable',
+            ]}
+          />
+          {' '}
+          with Next.js, Tailwind CSS, and Shadcn UI
+        </div>
         <div className="flex justify-center pt-10">
           <div className="max-w-[500px] flex flex-wrap gap-[20px] max-sm:justify-center">
             <Button
