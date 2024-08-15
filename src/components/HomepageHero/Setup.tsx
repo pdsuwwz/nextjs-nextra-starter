@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { LinkPreview } from '@/components/ui/link-preview'
 import { FlipWords } from '@/components/ui/flip-words'
 import { Button } from '@/components/ui/button'
 import styles from '@/components/HomepageHero/SetupHero.module.scss'
@@ -53,8 +54,34 @@ export function SetupHero(props: Props) {
               'Reusable',
             ]}
           />
+          <br />
+          With
           {' '}
-          with Next.js, Tailwind CSS, and Shadcn UI
+          <LinkPreview
+            url="https://nextjs.org"
+          >
+            Next.js
+          </LinkPreview>
+          ,
+          {' '}
+          <LinkPreview
+            url="https://tailwindcss.com"
+          >
+            Tailwind CSS
+          </LinkPreview>
+          , and
+          {' '}
+          <LinkPreview
+            url="https://ui.shadcn.com"
+          >
+            Shadcn UI
+          </LinkPreview>
+          {', '}
+          <LinkPreview
+            url="https://ui.aceternity.com"
+          >
+            Aceternity UI
+          </LinkPreview>
         </div>
         <div className="flex justify-center pt-10">
           <div className="max-w-[500px] flex flex-wrap gap-[20px] max-sm:justify-center">
