@@ -13,7 +13,7 @@ export const Section = (props: Props) => {
   const { className, title, description, children } = props
   return (
     <section className={cn(
-      'flex flex-col items-center justify-center',
+      'flex flex-col items-center justify-center px-6',
       className,
     )}
     >
@@ -29,15 +29,15 @@ export const Section = (props: Props) => {
         >
           <span>{ title }</span>
         </h2>
-        {
-          description
-          && (
-            <h2 className="text-sm md:text-base max-w-4xl my-4 mx-auto text-center font-normal">
-              { description }
-            </h2>
-          )
-        }
       </MotionWrapperFlash>
+      {
+        description
+        && (
+          <h2 className="text-sm md:text-base max-w-4xl my-4 mx-auto text-center font-normal text-zinc-600 dark:text-zinc-400">
+            { description }
+          </h2>
+        )
+      }
       {children}
     </section>
   )
