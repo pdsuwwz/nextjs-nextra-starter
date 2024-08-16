@@ -1,6 +1,25 @@
+import Marquee from 'react-fast-marquee'
 import { SetupHero } from './Setup'
 import { Section } from './Section'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
+import { cn } from '@/lib/utils'
+
+export const StackItem = ({
+  className,
+}: {
+  className: string
+},
+) => {
+  return (
+    <div className={cn(
+      'mx-6 size-[50px]',
+      'text-neutral-800 dark:text-neutral-100',
+      className,
+    )}
+    >
+    </div>
+  )
+}
 
 export default function HomepageHero() {
   const featureList = [
@@ -49,19 +68,34 @@ export default function HomepageHero() {
       </div> */}
       <div className="pt-[20px] pb-[100px]">
         <Section
-          title="Features"
-          description="Provides a starter for Next.js with Nextra, featuring Tailwind CSS, Framer Motion, and Radix UI components."
+          title="Tech Stack"
         >
-          <div className="flex justify-center w-full max-w-7xl">
-            <HoverEffect items={featureList} />
+          <div className="flex justify-center w-full max-w-7xl py-[50px]">
+            <Marquee
+              pauseOnHover
+              autoFill
+              speed={60}
+            >
+              <StackItem className="icon-[akar-icons--nextjs-fill]" />
+              <StackItem className="icon-[simple-icons--react]" />
+              <StackItem className="icon-[simple-icons--tailwindcss]" />
+              <StackItem className="icon-[teenyicons--framer-outline]" />
+              <StackItem className="icon-[simple-icons--shadcnui]" />
+              <StackItem className="icon-[simple-icons--typescript]" />
+              <StackItem className="icon-[fa6-brands--sass]" />
+              <StackItem className="icon-[teenyicons--eslint-outline]" />
+              <StackItem className="icon-[simple-icons--postcss]" />
+              <StackItem className="icon-[simple-icons--nextra]" />
+              <StackItem className="icon-[line-md--iconify1]" />
+            </Marquee>
           </div>
         </Section>
         <Section
-          title="Tech Stack"
-          description="Uses Next.js, React, Tailwind CSS, TypeScript, and ESLint for development."
+          title="Features"
+          description="Provides a starter for Next.js with Nextra, featuring Tailwind CSS, Framer Motion, and Shadcn UI components."
         >
-          <div className="flex justify-center w-full border border-primary max-w-5xl py-[100px]">
-            🚧 待完善
+          <div className="flex justify-center w-full max-w-7xl">
+            <HoverEffect items={featureList} />
           </div>
         </Section>
       </div>
