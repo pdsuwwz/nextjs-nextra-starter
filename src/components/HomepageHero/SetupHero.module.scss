@@ -125,14 +125,6 @@
   font-weight: 400;
   line-height: 1.6;
 
-  br {
-    display: none;
-
-    @media (min-width: 810px) {
-      display: block;
-    }
-  }
-
   @apply text-neutral-500 dark:text-neutral-300;
 }
 
