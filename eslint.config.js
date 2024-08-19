@@ -61,5 +61,7 @@ export default antfu({
     }],
     'style/max-statements-per-line': ERROR,
     'style/quote-props': [ERROR, 'as-needed'],
+
+    'ts/no-use-before-define': OFF,
   },
 })
