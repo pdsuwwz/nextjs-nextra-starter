@@ -1,4 +1,5 @@
 import Marquee from 'react-fast-marquee'
+import { useTheme } from 'nextra-theme-docs'
 import { SetupHero } from './Setup'
 import { Section } from './Section'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
@@ -49,6 +50,8 @@ export default function HomepageHero() {
     },
   ]
 
+  const { resolvedTheme } = useTheme()
+
   return (
     <>
       <SetupHero />
@@ -70,10 +73,15 @@ export default function HomepageHero() {
         <Section
           title="Tech Stack"
         >
-          <div className="flex justify-center w-full max-w-7xl py-[50px]">
+          <div className="flex justify-center w-full max-w-7xl h-[160px]">
             <Marquee
               pauseOnHover
               autoFill
+              gradient
+              gradientColor={
+                resolvedTheme === 'dark' ? 'black' : 'white'
+              }
+              direction="right"
               speed={60}
             >
               <StackItem className="icon-[akar-icons--nextjs-fill]" />
