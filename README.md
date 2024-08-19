@@ -25,6 +25,12 @@
 - Pnpm 9.x
 - **VS Code 插件 `dbaeumer.vscode-eslint` >= v3.0.5 (pre-release)**
 
+## 运行效果
+
+![image](https://github.com/user-attachments/assets/d3d3a62a-282b-477f-91fc-e00e5978082c)
+
+
+
 ## 安装和运行
 
 - 安装依赖
