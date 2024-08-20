@@ -42,15 +42,15 @@
   margin: 0 auto;
   position: relative;
   z-index: 2;
-  padding-bottom: 142px;
   padding-left: max(env(safe-area-inset-left), 1.5rem);
   padding-right: max(env(safe-area-inset-right), 1.5rem);
   max-width: 90rem;
   text-align: center;
+  @apply pb-12 md:pb-[142px];
 }
 
 .badgeContainer {
-  margin-top: 4rem;
+  @apply mt-8 md:mt-16;
 }
 
 .badge {
@@ -114,7 +114,7 @@
     background-image: linear-gradient(146deg, #fff, #81878b);
   }
 
-  @apply sm:inline-flex max-sm:flex max-sm:flex-col;
+  @apply flex max-lg:flex max-lg:flex-col items-center justify-center;
 }
 
 .subtitle {

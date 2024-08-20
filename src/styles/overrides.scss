@@ -10,3 +10,10 @@ input,
     box-shadow: none;
   }
 }
+
+.button-switch {
+  @apply max-md:hidden;
+  svg {
+    @apply size-[14px];
+  }
+}

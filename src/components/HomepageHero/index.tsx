@@ -69,11 +69,12 @@ export default function HomepageHero() {
           />
         </a>
       </div> */}
-      <div className="pt-[20px] pb-[100px]">
+      <div className="top-[-55px] mb-[-55px] md:top-[-68px] md:mb-[-68px]"></div>
+      <div className="relative z-[1] pt-[20px] pb-10 md:pb-[100px]">
         <Section
           title="Tech Stack"
         >
-          <div className="flex justify-center w-full max-w-7xl h-[160px]">
+          <div className="flex justify-center w-full max-w-7xl h-[80px] my-[30px]">
             <Marquee
               pauseOnHover
               autoFill
