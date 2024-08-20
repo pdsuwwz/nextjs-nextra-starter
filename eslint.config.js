@@ -64,5 +64,6 @@ export default antfu({
     'style/quote-props': [ERROR, 'as-needed'],
 
     'ts/no-use-before-define': OFF,
+    'ts/ban-ts-comment': OFF,
   },
 })

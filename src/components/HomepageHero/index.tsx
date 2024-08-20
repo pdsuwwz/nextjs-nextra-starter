@@ -80,7 +80,7 @@ export default function HomepageHero() {
               autoFill
               gradient
               gradientColor={
-                resolvedTheme === 'dark' ? '#111111' : 'white'
+                resolvedTheme === 'dark' ? '#1a1a1a' : 'white'
               }
               direction="right"
               speed={60}
