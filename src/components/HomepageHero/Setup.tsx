@@ -6,7 +6,6 @@ import styles from '@/components/HomepageHero/SetupHero.module.scss'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
 import { useLocale } from '@/hooks'
 
-
 interface Props {
 }
 export function SetupHero(props: Props) {
@@ -14,8 +13,7 @@ export function SetupHero(props: Props) {
 
   return (
     <div className={styles.container}>
-      <div className={styles.tilesBackground}></div>
-      <div className={styles.tilesGradient}></div>
+      {/* <div className={styles.tilesBox}></div> */}
       <div className={styles.content}>
         <div className={styles.badgeContainer}>
           <a
