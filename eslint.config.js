@@ -39,6 +39,7 @@ export default antfu({
     'react-hooks/exhaustive-deps': WARN,
     'react/no-useless-fragment': OFF,
     'react/no-array-index-key': OFF,
+    'react-hooks/rules-of-hooks': OFF,
 
     'unused-imports/no-unused-vars': WARN,
     curly: [ERROR, 'multi-line', 'consistent'],

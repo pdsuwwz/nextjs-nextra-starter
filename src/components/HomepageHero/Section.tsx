@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
-import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
+import { MotionWrapperFadeIn, MotionWrapperFlash } from '@/components/MotionWrapper'
 
 interface Props {
   title?: string
@@ -17,7 +17,7 @@ export const Section = (props: Props) => {
       className,
     )}
     >
-      <MotionWrapperFlash disabledHover>
+      <MotionWrapperFlash>
         <h2 className={cn(
           'relative',
           'text-center font-semibold',
@@ -30,14 +30,16 @@ export const Section = (props: Props) => {
           <span>{ title }</span>
         </h2>
       </MotionWrapperFlash>
-      {
-        description
-        && (
-          <h2 className="text-sm md:text-base max-w-4xl my-4 mx-auto text-center font-normal text-zinc-600 dark:text-zinc-400">
-            { description }
-          </h2>
-        )
-      }
+      <MotionWrapperFadeIn>
+        {
+          description
+          && (
+            <h2 className="text-sm md:text-base max-w-4xl my-4 mx-auto text-center font-normal text-zinc-600 dark:text-zinc-400">
+              { description }
+            </h2>
+          )
+        }
+      </MotionWrapperFadeIn>
       {children}
     </section>
   )

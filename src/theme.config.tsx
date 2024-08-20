@@ -1,25 +1,51 @@
-import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
+import { type DocsThemeConfig, LocaleSwitch, ThemeSwitch, useConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
-import { CustomFooter } from './components/CustomFooter'
+import Link from 'next/link'
+import { useLocale } from '@/hooks'
+import { CustomFooter } from '@/components/CustomFooter'
 
-const title = 'My Nextra Starter'
-const description = 'A Starter template with Next.js, Nextra'
 const repo = 'https://github.com/pdsuwwz/nextjs-nextra-starter'
-const url = 'https://github.com/pdsuwwz/nextjs-nextra-starter'
 
-const docsThemeConfig: DocsThemeConfig = {
+const docsThemeConfig = {
   docsRepositoryBase: `${repo}/tree/main/docs`,
-  head: () => <></>,
+  head: () => {
+    const title = 'My Nextra Starter'
+    const description = 'A Starter template with Next.js, Nextra'
+    const { asPath } = useRouter()
+    const { title: pageTitle } = useConfig()
+    return (
+      <>
+        <title>{asPath !== '/' ? `${pageTitle} - ${title}` : title}</title>
+        <meta property="og:title" content={title} />
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+        <link rel="canonical" href={repo} />
+        <link
+          rel="icon"
+          sizes="20"
+          href="/vercel-triangle.svg"
+          type="image/svg+xml"
+          media="(prefers-color-scheme: light)"
+        />
+      </>
+    )
+  },
   footer: {
-    text: () => (
+    content: () => (
       <CustomFooter />
     ),
   },
-  logo: () => (
-    <>
-      <span>🚀 My Nextra Starter</span>
-    </>
-  ),
+  logoLink: false,
+  logo: () => {
+    const { t, currentLocale } = useLocale()
+    return (
+      <>
+        <Link href={`/${currentLocale}`}>
+          {t('systemTitle') }
+        </Link>
+      </>
+    )
+  },
   project: {
     link: repo,
   },
@@ -30,36 +56,49 @@ const docsThemeConfig: DocsThemeConfig = {
       system: '跟随系统',
     },
   },
+  i18n: [
+    { locale: 'zh', name: '简体中文' },
+    { locale: 'en', name: 'English' },
+  ],
+  navbar: {
+    extraContent: () => {
+      return (
+        <>
+          {ThemeSwitch({ lite: true, className: 'button-switch' })}
+          {LocaleSwitch({ lite: true, className: 'button-switch' })}
+        </>
+      )
+    },
+  },
   sidebar: {
     toggleButton: true,
     defaultMenuCollapseLevel: 1,
   },
+  nextThemes: {
+    defaultTheme: 'system',
+  },
   toc: {
     backToTop: true,
   },
-  useNextSeoProps() {
-    const { asPath } = useRouter()
-    const { title: pageTitle } = useConfig()
-    return {
-      additionalLinkTags: [
-        {
-          rel: 'icon',
-          sizes: '20',
-          href: '/vercel-triangle.svg',
-          type: 'image/svg+xml',
-        },
-      ],
-      additionalMetaTags: [],
-      canonical: url,
-      description,
-      openGraph: {
-        title,
-        description,
-        url,
-      },
-      title: asPath !== '/' ? `${pageTitle} - ${title}` : title,
-    }
+  banner: {
+    content: () => {
+      const { t } = useLocale()
+
+      return (
+        <div>
+          { t('bannerTitle') }
+          {' '}
+          <a
+            className="max-sm:hidden text-warning hover:underline"
+            target="_blank"
+            href={repo}
+          >
+            { t('bannerMore') }
+          </a>
+        </div>
+      )
+    },
   },
-}
+} satisfies DocsThemeConfig
 
 export default docsThemeConfig

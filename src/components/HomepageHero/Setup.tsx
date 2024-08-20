@@ -4,11 +4,14 @@ import { FlipWords } from '@/components/ui/flip-words'
 import { Button } from '@/components/ui/button'
 import styles from '@/components/HomepageHero/SetupHero.module.scss'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
+import { useLocale } from '@/hooks'
 
 
 interface Props {
 }
 export function SetupHero(props: Props) {
+  const { t, currentLocale } = useLocale()
+
   return (
     <div className={styles.container}>
       <div className={styles.tilesBackground}></div>
@@ -21,11 +24,11 @@ export function SetupHero(props: Props) {
             target="_blank"
             rel="noopener noreferrer"
           >
-            轻量级、开箱即用 🎉
+            {t('badgeTitle')}
           </a>
         </div>
         <h1 className={styles.headline}>
-          <MotionWrapperFlash>
+          <MotionWrapperFlash className="flex items-center">
             <span className="icon-[emojione-v1--lightning-mood]"></span>
           </MotionWrapperFlash>
           {' '}
@@ -88,20 +91,20 @@ export function SetupHero(props: Props) {
             <Button
               asChild
               size="lg"
-              className="group max-sm:w-[100%]"
+              className="font-bold group max-sm:w-[100%]"
             >
               <Link
-                href="/introduction"
+                href={`/${currentLocale}/introduction`}
               >
                 Get Started
-                <span className="w-[20px] pl-[6px] transition-all group-hover:pl-[10px]">→</span>
+                <span className="w-[20px] translate-x-[6px] transition-all group-hover:translate-x-[10px] icon-[mingcute--arrow-right-fill]"></span>
               </Link>
             </Button>
             <Button
               asChild
               size="lg"
               variant="secondary"
-              className="group max-sm:w-[100%]"
+              className="font-bold group max-sm:w-[100%]"
             >
               <Link
                 href="https://github.com/pdsuwwz/nextjs-nextra-starter"
