@@ -5,6 +5,8 @@ import { Section } from './Section'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { cn } from '@/lib/utils'
 
+import { PanelParticles } from '@/components/PanelParticles'
+
 export const StackItem = ({
   className,
 }: {
@@ -54,6 +56,7 @@ export default function HomepageHero() {
 
   return (
     <>
+      <PanelParticles />
       <SetupHero />
       {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-[2]">
         <a
