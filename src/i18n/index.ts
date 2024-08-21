@@ -29,6 +29,15 @@ export type NestedKeyOf<ObjectType extends object> = {
 export type LocaleKeys = NestedKeyOf<AllLocales>
 
 
+// 获取嵌套值
 export function getNestedValue(obj: Record<string, any>, path: string): any {
   return path.split('.').reduce((acc, key) => acc && acc[key], obj)
+}
+
+// 插入值表达式
+export function interpolateString(template: string, context: Record<string, any>): string {
+  return template.replace(/\{\{(\w+(\.\w+)*)\}\}/g, (_, path) => {
+    const value = getNestedValue(context, path)
+    return value !== undefined ? value : `{{${path}}}`
+  })
 }
