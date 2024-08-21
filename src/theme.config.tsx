@@ -84,14 +84,14 @@ const docsThemeConfig = {
 
       return (
         <div>
-          { t('bannerTitle') }
+          { t('banner.title') }
           {' '}
           <a
             className="max-sm:hidden text-warning hover:underline"
             target="_blank"
             href={repo}
           >
-            { t('bannerMore') }
+            { t('banner.more') }
           </a>
         </div>
       )
