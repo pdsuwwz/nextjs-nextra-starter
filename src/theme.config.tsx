@@ -1,6 +1,8 @@
-import { type DocsThemeConfig, LocaleSwitch, ThemeSwitch, useConfig } from 'nextra-theme-docs'
+import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import ThemeToggle from './widgets/theme-toggle'
+import LocaleToggle from './widgets/locale-toggle'
 import { useLocale } from '@/hooks'
 import { CustomFooter } from '@/components/CustomFooter'
 
@@ -50,11 +52,7 @@ const docsThemeConfig = {
     link: repo,
   },
   themeSwitch: {
-    useOptions: {
-      light: '浅色',
-      dark: '暗黑',
-      system: '跟随系统',
-    },
+    component: () => <></>,
   },
   i18n: [
     { locale: 'zh', name: '简体中文' },
@@ -64,8 +62,8 @@ const docsThemeConfig = {
     extraContent: () => {
       return (
         <>
-          {ThemeSwitch({ lite: true, className: 'button-switch' })}
-          {LocaleSwitch({ lite: true, className: 'button-switch' })}
+          <ThemeToggle />
+          <LocaleToggle />
         </>
       )
     },
