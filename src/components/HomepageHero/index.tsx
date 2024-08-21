@@ -82,10 +82,8 @@ export default function HomepageHero() {
               pauseOnHover
               autoFill
               gradient
-              gradientColor={
-                resolvedTheme === 'dark' ? '#1a1a1a' : 'white'
-              }
               direction="right"
+              gradientColor="hsl(var(--background))"
               speed={60}
             >
               <StackItem className="icon-[akar-icons--nextjs-fill]" />
