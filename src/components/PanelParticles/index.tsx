@@ -80,6 +80,7 @@ const PanelParticles = () => {
 
   return (
     <Particles
+      className="max-sm:hidden"
       options={options}
     />
   )
