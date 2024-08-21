@@ -29,15 +29,28 @@ export type NestedKeyOf<ObjectType extends object> = {
 export type LocaleKeys = NestedKeyOf<AllLocales>
 
 
+type DeepObject = Record<string, any>
+
+// 类型提取给定路径上值的类型
+export type PathValue<T, P extends string> =
+  P extends `${infer Key}.${infer Rest}`
+    ? Key extends keyof T
+      ? PathValue<T[Key], Rest>
+      : never
+    : P extends keyof T
+      ? T[P]
+      : never
+
 // 获取嵌套值
-export function getNestedValue(obj: Record<string, any>, path: string): any {
-  return path.split('.').reduce((acc, key) => acc && acc[key], obj)
+export function getNestedValue<T extends DeepObject, K extends string>(obj: T, path: K): PathValue<T, K> {
+  return path.split('.').reduce((acc, key) => acc && acc[key], obj) as PathValue<T, K>
 }
+
 
 // 插入值表达式
 export function interpolateString(template: string, context: Record<string, any>): string {
-  return template.replace(/\{\{(\w+(\.\w+)*)\}\}/g, (_, path) => {
-    const value = getNestedValue(context, path)
-    return value !== undefined ? value : `{{${path}}}`
+  return template.replace(/\{\{\s*(\w+(\.\w+)*)\s*\}\}/g, (_, path) => {
+    const value = getNestedValue(context, path.trim())
+    return value !== undefined ? value : `{{${path.trim()}}}`
   })
 }
