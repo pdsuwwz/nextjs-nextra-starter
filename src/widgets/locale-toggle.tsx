@@ -18,6 +18,11 @@ export default function LocaleToggle({
   const { asPath } = router
 
   const changeLocale = useCallback(() => {
+    // 滚动条位置记录
+    const currentPosition = window.scrollY
+    // 检查是否滚动到底部
+    const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight
+
     const nextHref = {
       value: '',
     }
@@ -27,7 +32,20 @@ export default function LocaleToggle({
     else {
       nextHref.value = addBasePath(asPath.replace(`/en`, `/zh`))
     }
-    router.replace(nextHref.value)
+
+    router
+      .replace(nextHref.value)
+      .then(() => {
+        // 滚动条位置恢复
+        if (isAtBottom) {
+          // 如果之前在底部，则依旧滚动到新的底部
+          window.scrollTo(0, document.body.scrollHeight)
+        }
+        else {
+          // 否则，恢复到之前的滚动位置
+          window.scrollTo(0, currentPosition)
+        }
+      })
   }, [asPath, currentLocale, router])
 
   return (
