@@ -33,7 +33,7 @@ const docsThemeConfig = {
     )
   },
   footer: {
-    content: () => (
+    component: () => (
       <CustomFooter />
     ),
   },
@@ -54,16 +54,13 @@ const docsThemeConfig = {
   themeSwitch: {
     component: () => <></>,
   },
-  i18n: [
-    { locale: 'zh', name: '简体中文' },
-    { locale: 'en', name: 'English' },
-  ],
+  i18n: [],
   navbar: {
     extraContent: () => {
       return (
         <>
-          <ThemeToggle />
-          <LocaleToggle />
+          <LocaleToggle className="max-md:hidden" />
+          <ThemeToggle className="max-md:hidden" />
         </>
       )
     },
