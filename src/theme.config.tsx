@@ -37,6 +37,12 @@ const docsThemeConfig = {
       <CustomFooter />
     ),
   },
+  feedback: {
+    content: () => <></>,
+  },
+  editLink: {
+    content: () => <></>,
+  },
   logoLink: false,
   logo: () => {
     const { t, currentLocale } = useLocale()

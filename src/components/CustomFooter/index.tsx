@@ -1,6 +1,9 @@
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { cn } from '@/lib/utils'
+import LocaleToggle from '@/widgets/locale-toggle'
+import ThemeToggle from '@/widgets/theme-toggle'
+import { Separator } from '@/components/ui/separator'
 
 const UnderlineLink = ({
   link,
@@ -37,7 +40,7 @@ export function CustomFooter() {
       <hr className="border-gray-200 sm:mx-auto dark:border-gray-800 pt-5 max-sm:pt-10"></hr>
       <div className={cn(
         'flex justify-center items-center gap-[2px] pb-5',
-        'max-sm:flex-col-reverse max-sm:gap-5 max-sm:pb-10',
+        'max-sm:flex-col max-sm:gap-5 max-sm:pb-10',
         'tracking-wide text-[15px] text-center group',
         'text-gray-500/[0.8] dark:text-zinc-300/[0.8]',
       )}
@@ -47,6 +50,7 @@ export function CustomFooter() {
           label="CC BY-NC-SA 4.0"
           underlineByDefault
         />
+
         <div className="flex items-center gap-[2px]">
           <span className="pl-[4px]">
             Copyright ©
@@ -58,6 +62,17 @@ export function CustomFooter() {
             label="Wisdom"
           />
         </div>
+
+        <Separator
+          orientation="vertical"
+          className="max-sm:hidden h-5 mx-2"
+        />
+        <div className="flex justify-center h-5 items-center space-x-2 text-sm">
+          <ThemeToggle />
+          <Separator orientation="vertical" />
+          <LocaleToggle />
+        </div>
+
       </div>
     </footer>
   )

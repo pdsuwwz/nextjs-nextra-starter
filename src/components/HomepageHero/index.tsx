@@ -50,8 +50,7 @@ export default function HomepageHero() {
           />
         </a>
       </div> */}
-      <div className="top-[-55px] mb-[-55px] md:top-[-68px] md:mb-[-68px]"></div>
-      <div className="relative z-[1] pt-[20px] pb-10 md:pb-[100px]">
+      <div className="relative z-[1] pb-10 md:pb-[100px]">
         <Section
           title="Tech Stack"
         >
