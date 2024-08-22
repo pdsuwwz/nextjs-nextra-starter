@@ -1,6 +1,7 @@
 body {
   font-family: 'sans-serif', 'Arial', 'Microsoft Yahei';
   text-rendering: optimizeLegibility;
+  overflow-x: hidden;
 }
 a,
 summary,
@@ -16,5 +17,12 @@ input,
   @apply max-md:hidden;
   svg {
     @apply size-[14px];
+  }
+}
+
+:root {
+  --nextra-bg: 255, 255, 255;
+  &.dark {
+    --nextra-bg: 26, 26, 26;
   }
 }

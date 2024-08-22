@@ -5,9 +5,13 @@ import { useLocale } from '@/hooks'
 import { Toggle } from '@/components/ui/toggle'
 
 /**
- * 速切换语言组件，用于覆盖 nextra 原生切换下拉框
+ * 快速切换语言组件，用于覆盖 nextra 原生切换下拉框
  */
-export default function LocaleToggle() {
+export default function LocaleToggle({
+  className,
+}: {
+  className?: string
+}) {
   const { currentLocale } = useLocale()
 
   const router = useRouter()
@@ -29,6 +33,7 @@ export default function LocaleToggle() {
   return (
     <Toggle
       size="sm"
+      className={className}
       onClick={changeLocale}
     >
       {

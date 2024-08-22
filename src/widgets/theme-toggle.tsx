@@ -2,7 +2,11 @@ import { useTheme } from 'nextra-theme-docs'
 import { useCallback } from 'react'
 import { Toggle } from '@/components/ui/toggle'
 
-export default function ThemeToggle() {
+export default function ThemeToggle({
+  className,
+}: {
+  className?: string
+}) {
   const { setTheme, theme } = useTheme()
 
   const changeTheme = useCallback(() => {
@@ -17,7 +21,7 @@ export default function ThemeToggle() {
   return (
     <Toggle
       size="sm"
-      className="max-md:hidden"
+      className={className}
       onClick={changeTheme}
     >
       <span className="icon-[ri--sun-fill] dark:icon-[ri--moon-clear-fill]"></span>
