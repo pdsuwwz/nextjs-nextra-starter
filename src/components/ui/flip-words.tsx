@@ -1,6 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import type { TargetAndTransition } from 'framer-motion'
 import { AnimatePresence, motion } from 'framer-motion'
 import { cn } from '@/lib/utils'
+import { useBreakpoint } from '@/hooks'
 
 export const FlipWords = ({
   words,
@@ -29,6 +31,26 @@ export const FlipWords = ({
     }
   }, [isAnimating, duration, startAnimation])
 
+  const { isMd } = useBreakpoint()
+
+  const motionExit = useMemo<TargetAndTransition>(() => {
+    if (isMd) {
+      return {
+        opacity: 0,
+        filter: 'blur(0px)',
+        position: 'absolute',
+      }
+    }
+    return {
+      opacity: 0,
+      y: -40,
+      x: 40,
+      filter: 'blur(8px)',
+      scale: 2,
+      position: 'absolute',
+    }
+  }, [isMd])
+
   return (
     <AnimatePresence
       onExitComplete={() => {
@@ -49,14 +71,7 @@ export const FlipWords = ({
           stiffness: 100,
           damping: 10,
         }}
-        exit={{
-          opacity: 0,
-          y: -40,
-          x: 40,
-          filter: 'blur(8px)',
-          scale: 2,
-          position: 'absolute',
-        }}
+        exit={motionExit}
         className={cn(
           'inline-block relative font-bold text-neutral-700 dark:text-neutral-200',
           className,
