@@ -4,20 +4,33 @@ import { MotionWrapperFadeIn, MotionWrapperFlash } from '@/components/MotionWrap
 
 interface Props {
   title?: string
+  titleProps?: Partial<React.ComponentProps<typeof MotionWrapperFlash>>
   description?: string
   children?: ReactNode
   className?: string
+  tallPaddingY?: boolean
 }
 
 export const Section = (props: Props) => {
-  const { className, title, description, children } = props
+  const {
+    className,
+    titleProps,
+    title,
+    description,
+    children,
+    tallPaddingY = false,
+  } = props
   return (
     <section className={cn(
       'flex flex-col items-center justify-center px-6',
       className,
     )}
     >
-      <MotionWrapperFlash>
+      <MotionWrapperFlash
+        {
+          ...titleProps
+        }
+      >
         <h2 className={cn(
           'relative',
           'text-center font-semibold',
@@ -25,6 +38,7 @@ export const Section = (props: Props) => {
           'text-3xl md:text-5xl md:leading-tight pt-4',
           'from-neutral-700 to-black',
           'dark:from-neutral-800 dark:to-white',
+          `${tallPaddingY ? 'pt-20 pb-10' : ''}`,
         )}
         >
           <span>{ title }</span>

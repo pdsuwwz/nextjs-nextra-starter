@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
@@ -18,13 +19,37 @@ export const Card = ({
         'border duration-200',
         'bg-neutral-50 dark:bg-neutral-800',
         'border-neutral-200/[0.5] dark:border-white/[0.1]',
-        'group-hover:border-neutral-300/[0.6] dark:group-hover:border-white/[0.3]',
+        'group-hover:border-neutral-300/[0.6] dark:group-hover:border-primary/[0.8]',
         className,
       )}
     >
       <div className="relative">
         <div className="p-4">{children}</div>
       </div>
+    </div>
+  )
+}
+
+export const CardIcon = ({
+  className,
+  children,
+}: {
+  className?: string
+  children?: React.ReactNode
+}) => {
+  return (
+    <div className={cn(
+      'flex justify-center items-center',
+      'rounded-[6px]',
+      'text-zinc-600 dark:text-zinc-200',
+      'size-[48px] mb-[20px] bg-red-200',
+      'text-[24px]',
+      'bg-[#e3e3e5] dark:bg-[#1e1e20]',
+      'transition-all duration-300 dark:group-hover:text-primary',
+      className,
+    )}
+    >
+      {children}
     </div>
   )
 }
@@ -46,6 +71,7 @@ export const CardTitle = ({
     </h4>
   )
 }
+
 export const CardDescription = ({
   className,
   children,
@@ -74,6 +100,7 @@ export const HoverEffect = ({
     title: string
     description: string
     link?: string
+    icon: ReactNode
   }[]
   className?: string
 }) => {
@@ -111,6 +138,7 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
+            <CardIcon>{item.icon}</CardIcon>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
           </Card>

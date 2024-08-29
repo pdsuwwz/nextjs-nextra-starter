@@ -1,5 +1,7 @@
 import Marquee from 'react-fast-marquee'
 import { useTheme } from 'nextra-theme-docs'
+import { useMemo } from 'react'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
 import { SetupHero } from './Setup'
 import { Section } from './Section'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
@@ -29,8 +31,29 @@ export default function HomepageHero() {
   const { t } = useLocale()
 
   const featureList = t('featureList')
+  const faqs = t('faqs')
 
   const { resolvedTheme } = useTheme()
+
+  const processedFeatureList = useMemo(() => {
+    const icons = [
+      'icon-[material-symbols--rocket-launch-outline]',
+      'icon-[icon-park-outline--international]',
+      'icon-[nonicons--typescript-16]',
+      'icon-[carbon--face-satisfied] hover:icon-[carbon--face-wink]',
+      'icon-[teenyicons--tailwind-outline]',
+      'icon-[tabler--calendar-code]',
+      'icon-[carbon--color-palette]',
+      'icon-[carbon--ibm-cloud-transit-gateway]',
+      'icon-[carbon--flash]',
+    ]
+    return featureList.map((item, index) => {
+      return {
+        ...item,
+        icon: <span className={icons[index] || icons[0]}></span>,
+      }
+    })
+  }, [featureList])
 
   return (
     <>
@@ -53,6 +76,9 @@ export default function HomepageHero() {
       <div className="relative z-[1] pb-10 md:pb-[100px]">
         <Section
           title="Tech Stack"
+          titleProps={{
+            disabledAnimation: false,
+          }}
         >
           <div className="flex justify-center w-full max-w-7xl h-[80px] my-[30px]">
             <Marquee
@@ -79,11 +105,35 @@ export default function HomepageHero() {
         </Section>
         <Section
           title="Features"
-          description="Provides a starter for Next.js with Nextra, featuring Tailwind CSS, Framer Motion, and Shadcn UI components."
+          description={t('featuresDesc')}
         >
           <div className="flex justify-center w-full max-w-7xl">
-            <HoverEffect items={featureList} />
+            <HoverEffect items={processedFeatureList} />
           </div>
+        </Section>
+        <Section
+          title="Frequently Asked Questions"
+          tallPaddingY
+        >
+          <Accordion
+            type="single"
+            collapsible
+            className="w-full max-w-5xl"
+          >
+            {
+              faqs.map((faqItem, index) => (
+                <AccordionItem
+                  value={faqItem.question}
+                  key={index}
+                >
+                  <AccordionTrigger>{faqItem.question}</AccordionTrigger>
+                  <AccordionContent>
+                    {faqItem.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))
+            }
+          </Accordion>
         </Section>
       </div>
     </>
