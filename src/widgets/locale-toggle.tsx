@@ -1,8 +1,8 @@
-import { useCallback } from 'react'
-import { useRouter } from 'next/router'
-import { addBasePath } from 'next/dist/client/add-base-path'
-import { useLocale } from '@/hooks'
 import { Toggle } from '@/components/ui/toggle'
+import { useLocale } from '@/hooks'
+import { addBasePath } from 'next/dist/client/add-base-path'
+import { useRouter } from 'next/router'
+import { useCallback } from 'react'
 
 /**
  * 快速切换语言组件，用于覆盖 nextra 原生切换下拉框

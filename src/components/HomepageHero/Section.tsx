@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react'
-import { cn } from '@/lib/utils'
 import { MotionWrapperFadeIn, MotionWrapperFlash } from '@/components/MotionWrapper'
+import { cn } from '@/lib/utils'
 
 interface Props {
   title?: string

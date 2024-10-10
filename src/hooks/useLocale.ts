@@ -1,8 +1,8 @@
-import { useCallback } from 'react'
-import { useRouter } from 'nextra/hooks'
-
 import type { AllLocales, I18nLangKeys, LocaleKeys, PathValue } from '@/i18n'
 import { getNestedValue, i18nConfig, interpolateString } from '@/i18n'
+
+import { useRouter } from 'nextra/hooks'
+import { useCallback } from 'react'
 
 // 类型获取给定键的本地化值的类型
 type LocalizedValue<T, K extends LocaleKeys> = PathValue<T, K> extends string

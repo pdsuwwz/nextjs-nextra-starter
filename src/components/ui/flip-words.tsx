@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import type { TargetAndTransition } from 'framer-motion'
-import { AnimatePresence, motion } from 'framer-motion'
-import { cn } from '@/lib/utils'
 import { useBreakpoint } from '@/hooks'
+import { cn } from '@/lib/utils'
+import { AnimatePresence, motion } from 'framer-motion'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 
 export const FlipWords = ({
   words,
