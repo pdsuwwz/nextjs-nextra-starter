@@ -1,10 +1,10 @@
-import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import ThemeToggle from './widgets/theme-toggle'
-import LocaleToggle from './widgets/locale-toggle'
-import { useLocale } from '@/hooks'
 import { CustomFooter } from '@/components/CustomFooter'
+import { useLocale } from '@/hooks'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import { type DocsThemeConfig, useConfig } from 'nextra-theme-docs'
+import LocaleToggle from './widgets/locale-toggle'
+import ThemeToggle from './widgets/theme-toggle'
 
 const repo = 'https://github.com/pdsuwwz/nextjs-nextra-starter'
 

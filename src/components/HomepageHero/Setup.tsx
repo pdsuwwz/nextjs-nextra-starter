@@ -1,10 +1,10 @@
-import Link from 'next/link'
-import { LinkPreview } from '@/components/ui/link-preview'
-import { FlipWords } from '@/components/ui/flip-words'
-import { Button } from '@/components/ui/button'
 import styles from '@/components/HomepageHero/SetupHero.module.scss'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
+import { Button } from '@/components/ui/button'
+import { FlipWords } from '@/components/ui/flip-words'
+import { LinkPreview } from '@/components/ui/link-preview'
 import { useLocale } from '@/hooks'
+import Link from 'next/link'
 
 interface Props {
 }

@@ -1,8 +1,8 @@
-import { useTheme } from 'nextra-theme-docs'
-import Particles, { initParticlesEngine } from '@tsparticles/react'
 import type { ISourceOptions } from '@tsparticles/engine'
-import { loadFull } from 'tsparticles'
+import Particles, { initParticlesEngine } from '@tsparticles/react'
+import { useTheme } from 'nextra-theme-docs'
 import { useEffect, useMemo } from 'react'
+import { loadFull } from 'tsparticles'
 
 const PanelParticles = () => {
   const { resolvedTheme } = useTheme()
