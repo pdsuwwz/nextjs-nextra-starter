@@ -7,6 +7,8 @@ export default {
 
   badgeTitle: 'Lightweight & Easy 🎉',
 
+  reactSupport: `🔥 Now with {{feature}} support!`,
+
   featureList: [
     {
       title: 'Advanced Tech Stack',
