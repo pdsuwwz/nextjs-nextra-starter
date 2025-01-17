@@ -5,7 +5,7 @@
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/nextjs-nextra-starter?color=466fe8)](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/LICENSE)
 
-⚡️ 快速模板 Starter Template - Next.js + Nextra + TypeScript + TailwindCSS + Shadcn UI
+⚡️ 快速模板 Starter Template - React v19 + Next.js + Nextra + TypeScript + TailwindCSS + Shadcn UI
 
 [🚀 Live Demo 在线体验](https://nextjs-nextra-starter-green.vercel.app)
 
@@ -20,7 +20,7 @@
 
 ## 前置条件
 
-- React 18.x
+- React 19.x
 - Node >= 18.12.x
 - Pnpm 9.x
 - **VS Code 插件 `dbaeumer.vscode-eslint` >= v3.0.5 (pre-release)**
@@ -30,8 +30,6 @@
 ![image](https://github.com/user-attachments/assets/b28a58c5-91c3-4cbe-b047-1e56c5fcb270)
 ![image](https://github.com/user-attachments/assets/7f4ade20-8364-4e25-a5fd-73e42ec7118c)
 ![image](https://github.com/user-attachments/assets/a0a07f3f-a457-4521-a45f-4c0f970044f6)
-
-
 
 ## 安装和运行
 
@@ -53,7 +51,7 @@ pnpm dev
 
 ### Shadcn 结构初始化
 
-首次执行 `pnpm dlx shadcn-ui@latest init` 命令初始化 `Shadcn UI` 基本项目结构（如果尚未初始化）
+首次执行 `pnpm dlx shadcn@latest init` 命令初始化 `Shadcn UI` 基本项目结构（如果尚未初始化）
 
 💡 注意
 
@@ -66,13 +64,13 @@ pnpm dev
 1. 使用 `Shadcn CLI` 添加组件:
 
    ```bash
-   pnpm dlx shadcn-ui@latest add <组件名>
+   pnpm dlx shadcn@latest add <组件名>
    ```
 
    如添加 `<Alert />` 组件，执行以下命令即可，[详见文档](https://ui.shadcn.com/docs/components/alert#installation)
 
    ```bash
-   pnpm dlx shadcn-ui@latest add alert
+   pnpm dlx shadcn@latest add alert
    ```
 
 2. 使用组件
@@ -88,7 +86,6 @@ export default function Home() {
         You can add components and dependencies to your app using the cli.
       </AlertDescription>
     </Alert>
-
   )
 }
 ```

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { FlipWords } from '@/components/ui/flip-words'
 import { LinkPreview } from '@/components/ui/link-preview'
 import { useLocale } from '@/hooks'
+import clsx from 'clsx'
 import Link from 'next/link'
 
 interface Props {
@@ -13,7 +14,6 @@ export function SetupHero(props: Props) {
 
   return (
     <div className={styles.container}>
-      {/* <div className={styles.tilesBox}></div> */}
       <div className={styles.content}>
         <div className={styles.badgeContainer}>
           <a
@@ -39,6 +39,24 @@ export function SetupHero(props: Props) {
           {' '}
           Template
         </h1>
+
+        <p
+          className={clsx([
+            'bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white shadow-lg',
+            'dark:bg-gradient-to-r dark:from-green-400 dark:via-teal-500 dark:to-cyan-500 dark:text-white',
+            'text-sm mt-2 inline-block px-3 py-1 rounded-lg',
+            '[&>span]:font-bold',
+            'animate-pulse',
+            '[animation-duration:2s]',
+          ])}
+          dangerouslySetInnerHTML={{
+            __html: t('reactSupport', {
+              feature: `<span>React v19</span>`,
+            }),
+          }}
+        />
+
+
         <div className={styles.subtitle}>
           Template made
           {' '}

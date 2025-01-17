@@ -40,6 +40,8 @@ export default antfu({
     'react/no-useless-fragment': OFF,
     'react/no-array-index-key': OFF,
     'react-hooks/rules-of-hooks': OFF,
+    'react-refresh/only-export-components': OFF,
+    'react-dom/no-dangerously-set-innerhtml': OFF,
 
     'unused-imports/no-unused-vars': WARN,
     curly: [ERROR, 'multi-line', 'consistent'],
