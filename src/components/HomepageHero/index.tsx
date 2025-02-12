@@ -60,7 +60,7 @@ export default function HomepageHero() {
     <>
       <PanelParticles />
       <SetupHero />
-      {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-[2]">
+      {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-2">
         <a
           href="https://nextjs.org"
           target="_blank"
@@ -74,7 +74,7 @@ export default function HomepageHero() {
           />
         </a>
       </div> */}
-      <div className="relative z-[1] pb-10 md:pb-[100px]">
+      <div className="relative z-1 pb-10 md:pb-[100px]">
         <Section
           title="Tech Stack"
           titleProps={{

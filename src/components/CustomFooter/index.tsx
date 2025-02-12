@@ -21,7 +21,7 @@ const UnderlineLink = ({
       target="_blank"
       className={cn(
         'flex items-center rounded-none border border-transparent',
-        'hover:text-zinc-900 dark:text-zinc-300',
+        'dark:text-zinc-300',
         'duration-200',
         'hover:border-b-zinc-600',
         'dark:hover:border-b-zinc-300',

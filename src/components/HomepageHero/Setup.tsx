@@ -44,8 +44,8 @@ export function SetupHero(props: Props) {
 
         <p
           className={clsx([
-            'bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white shadow-lg',
-            'dark:bg-gradient-to-r dark:from-green-400 dark:via-teal-500 dark:to-cyan-500 dark:text-white',
+            'bg-linear-to-r from-yellow-400 via-orange-500 to-red-500 text-white shadow-lg',
+            'dark:bg-linear-to-r dark:from-green-400 dark:via-teal-500 dark:to-cyan-500 dark:text-white',
             'text-sm mt-2 inline-block px-3 py-1 rounded-lg',
             '[&>span]:font-bold',
             'animate-pulse',
