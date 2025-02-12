@@ -7,6 +7,7 @@ export default {
 
   badgeTitle: '轻量级、开箱即用 🎉',
   reactSupport: `🔥 现在支持 {{feature}}！`,
+  lastUpdated: '最后更新于:',
 
   featureList: [
     {

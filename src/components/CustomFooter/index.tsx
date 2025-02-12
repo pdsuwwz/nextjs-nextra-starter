@@ -4,6 +4,7 @@ import { cn } from '@/lib/utils'
 import LocaleToggle from '@/widgets/locale-toggle'
 import ThemeToggle from '@/widgets/theme-toggle'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 const UnderlineLink = ({
   link,
@@ -36,10 +37,9 @@ const UnderlineLink = ({
 
 export function CustomFooter() {
   return (
-    <footer className="pb-[env(safe-area-inset-bottom)]">
-      <hr className="border-gray-200 sm:mx-auto dark:border-gray-800 pt-5 max-sm:pt-10"></hr>
+    <div className="w-full flex justify-center items-center">
       <div className={cn(
-        'flex justify-center items-center gap-[2px] pb-5',
+        'flex justify-center items-center gap-[2px]',
         'max-sm:flex-col max-sm:gap-5 max-sm:pb-10',
         'tracking-wide text-[15px] text-center group',
         'text-gray-500/[0.8] dark:text-zinc-300/[0.8]',
@@ -74,6 +74,6 @@ export function CustomFooter() {
         </div>
 
       </div>
-    </footer>
+    </div>
   )
 }

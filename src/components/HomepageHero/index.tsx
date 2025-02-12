@@ -1,12 +1,13 @@
+'use client'
+
 import { PanelParticles } from '@/components/PanelParticles'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { useLocale } from '@/hooks'
 import { cn } from '@/lib/utils'
 import { useTheme } from 'nextra-theme-docs'
 import { useMemo } from 'react'
 import Marquee from 'react-fast-marquee'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
-
 import { Section } from './Section'
 import { SetupHero } from './Setup'
 
@@ -86,7 +87,7 @@ export default function HomepageHero() {
               autoFill
               gradient
               direction="right"
-              gradientColor="hsl(var(--background))"
+              gradientColor="var(--background)"
               speed={60}
             >
               <StackItem className="icon-[akar-icons--nextjs-fill]" />

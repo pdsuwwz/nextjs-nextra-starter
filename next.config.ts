@@ -1,8 +1,6 @@
 import createWithNextra from 'nextra'
 
 const withNextra = createWithNextra({
-  theme: 'nextra-theme-docs',
-  themeConfig: './src/theme.config.tsx',
   defaultShowCopyCode: true,
 })
 
@@ -14,20 +12,16 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   reactStrictMode: true,
-  distDir: './.next',
+  cleanDistDir: true,
   i18n: {
     locales: ['zh', 'en'],
     defaultLocale: 'zh',
   },
   sassOptions: {
-    silenceDeprecations: ['legacy-js-api'], // 👈 HERE
+    silenceDeprecations: ['legacy-js-api'],
   },
-  redirects: () => [
-    {
-      source: '/',
-      destination: '/zh',
-      permanent: true,
-    },
-  ],
 })

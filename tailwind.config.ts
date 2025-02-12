@@ -1,16 +1,14 @@
 import type { Config } from 'tailwindcss'
-import { addDynamicIconSelectors } from '@iconify/tailwind'
 import tailwindcssAnimate from 'tailwindcss-animate'
 
 const config = {
   darkMode: ['class', '[class~=\'dark\']'],
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './content/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
-  prefix: '',
   theme: {
     container: {
       center: true,
@@ -21,7 +19,7 @@ const config = {
     },
     extend: {
       colors: {
-        warning: '#f9b43b',
+        warning: 'hsl(var(--warning))',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
@@ -87,7 +85,6 @@ const config = {
   },
   plugins: [
     tailwindcssAnimate,
-    addDynamicIconSelectors(),
   ],
 } satisfies Config
 

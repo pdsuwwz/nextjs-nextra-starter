@@ -19,10 +19,3 @@ input,
     @apply size-[14px];
   }
 }
-
-:root {
-  --nextra-bg: 255, 255, 255;
-  &.dark {
-    --nextra-bg: 26, 26, 26;
-  }
-}

@@ -1,3 +1,5 @@
+'use client'
+
 import type { TargetAndTransition } from 'framer-motion'
 import { useBreakpoint } from '@/hooks'
 import { cn } from '@/lib/utils'

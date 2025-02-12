@@ -1,5 +1,9 @@
+'use client'
+
+
+import type { ReactNode } from 'react'
 import { motion } from 'framer-motion'
-import React, { type ReactNode } from 'react'
+import React from 'react'
 
 interface Props {
   className?: string

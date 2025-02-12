@@ -1,4 +1,6 @@
-import styles from '@/components/HomepageHero/SetupHero.module.scss'
+'use client'
+
+import styles from '@/components/HomepageHero/SetupHero.module.css'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
 import { Button } from '@/components/ui/button'
 import { FlipWords } from '@/components/ui/flip-words'
@@ -10,7 +12,7 @@ import Link from 'next/link'
 interface Props {
 }
 export function SetupHero(props: Props) {
-  const { t, currentLocale } = useLocale()
+  const { t } = useLocale()
 
   return (
     <div className={styles.container}>
@@ -54,10 +56,15 @@ export function SetupHero(props: Props) {
               feature: `<span>React v19</span>`,
             }),
           }}
-        />
+        >
+        </p>
 
 
-        <div className={styles.subtitle}>
+        <div className={clsx([
+          styles.subtitle,
+          'text-neutral-500 dark:text-neutral-300',
+        ])}
+        >
           Template made
           {' '}
           <FlipWords
@@ -110,7 +117,7 @@ export function SetupHero(props: Props) {
               className="font-bold group max-sm:w-[100%]"
             >
               <Link
-                href={`/${currentLocale}/introduction`}
+                href="/introduction"
               >
                 Get Started
                 <span className="w-[20px] translate-x-[6px] transition-all group-hover:translate-x-[10px] icon-[mingcute--arrow-right-fill]"></span>

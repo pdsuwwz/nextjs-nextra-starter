@@ -6,8 +6,8 @@ export default {
   },
 
   badgeTitle: 'Lightweight & Easy 🎉',
-
   reactSupport: `🔥 Now with {{feature}} support!`,
+  lastUpdated: 'Last updated on:',
 
   featureList: [
     {

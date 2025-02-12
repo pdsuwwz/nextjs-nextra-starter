@@ -1,3 +1,5 @@
+'use client'
+
 import type { Variants } from 'framer-motion'
 import { motion, useInView } from 'framer-motion'
 import { memo, useRef } from 'react'
