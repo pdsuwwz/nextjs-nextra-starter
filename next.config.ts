@@ -2,6 +2,7 @@ import createWithNextra from 'nextra'
 
 const withNextra = createWithNextra({
   defaultShowCopyCode: true,
+  unstable_shouldAddLocaleToLinks: true,
 })
 
 

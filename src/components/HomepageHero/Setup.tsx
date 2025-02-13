@@ -12,7 +12,7 @@ import Link from 'next/link'
 interface Props {
 }
 export function SetupHero(props: Props) {
-  const { t } = useLocale()
+  const { t, currentLocale } = useLocale()
 
   return (
     <div className={styles.container}>
@@ -52,8 +52,8 @@ export function SetupHero(props: Props) {
             '[animation-duration:2s]',
           ])}
           dangerouslySetInnerHTML={{
-            __html: t('reactSupport', {
-              feature: `<span>React v19</span>`,
+            __html: t('featureSupport', {
+              feature: `<span>Tailwind CSS v4, Nextra v4</span>`,
             }),
           }}
         >
@@ -117,9 +117,9 @@ export function SetupHero(props: Props) {
               className="font-bold group max-sm:w-[100%]"
             >
               <Link
-                href="/introduction"
+                href={`/${currentLocale}/introduction`}
               >
-                Get Started
+                {t('getStarted')}
                 <span className="w-[20px] translate-x-[6px] transition-all group-hover:translate-x-[10px] icon-[mingcute--arrow-right-fill]"></span>
               </Link>
             </Button>

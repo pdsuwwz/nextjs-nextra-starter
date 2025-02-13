@@ -8,7 +8,7 @@ import { useServerLocale } from '@/hooks'
 import LocaleToggle from '@/widgets/locale-toggle'
 import ThemeToggle from '@/widgets/theme-toggle'
 import { Footer, LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
-import { Banner, Head } from 'nextra/components'
+import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { getDictionary, getDirection } from '../_dictionaries/get-dictionary'
 
@@ -18,7 +18,8 @@ import './styles/index.css'
 export const metadata = {
   // Define your metadata here
   // For more information on metadata API, see: https://nextjs.org/docs/app/building-your-application/optimizing/metadata
-  icons: '/favicon.ico',
+  metadataBase: new URL('https://nextjs-nextra-starter-green.vercel.app'),
+  icons: '/img/favicon.svg',
 } satisfies Metadata
 
 const repo = 'https://github.com/pdsuwwz/nextjs-nextra-starter'
@@ -52,6 +53,7 @@ const CustomNavbar = async ({ lang }: I18nLangAsyncProps) => {
       logo={(
         <span>{ t('systemTitle') }</span>
       )}
+      logoLink={`/${lang}`}
       projectLink={repo}
     >
       <>
@@ -117,12 +119,14 @@ export default async function RootLayout({ children, params }: Props) {
                 { t('lastUpdated') }
               </LastUpdated>
             )}
+            editLink={null}
             docsRepositoryBase="https://github.com/pdsuwwz/nextjs-nextra-starter"
             footer={(
               <Footer className="bg-background py-5!">
                 <CustomFooter />
               </Footer>
             )}
+            search={<Search />}
             i18n={[
               { locale: 'en', name: 'English' },
               { locale: 'zh', name: '简体中文' },

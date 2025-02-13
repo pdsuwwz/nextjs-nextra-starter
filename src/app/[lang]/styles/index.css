@@ -4,8 +4,6 @@
 @plugin 'tailwindcss-animate';
 @plugin "@iconify/tailwind4";
 
-@custom-variant dark (&:is([class~='dark'] *));
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
