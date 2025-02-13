@@ -1,12 +1,13 @@
+'use client'
+
 import { PanelParticles } from '@/components/PanelParticles'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { useLocale } from '@/hooks'
 import { cn } from '@/lib/utils'
 import { useTheme } from 'nextra-theme-docs'
 import { useMemo } from 'react'
 import Marquee from 'react-fast-marquee'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../ui/accordion'
-
 import { Section } from './Section'
 import { SetupHero } from './Setup'
 
@@ -59,7 +60,7 @@ export default function HomepageHero() {
     <>
       <PanelParticles />
       <SetupHero />
-      {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-[2]">
+      {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-2">
         <a
           href="https://nextjs.org"
           target="_blank"
@@ -73,7 +74,7 @@ export default function HomepageHero() {
           />
         </a>
       </div> */}
-      <div className="relative z-[1] pb-10 md:pb-[100px]">
+      <div className="relative z-1 pb-10 md:pb-[100px]">
         <Section
           title="Tech Stack"
           titleProps={{
@@ -86,7 +87,7 @@ export default function HomepageHero() {
               autoFill
               gradient
               direction="right"
-              gradientColor="hsl(var(--background))"
+              gradientColor="var(--background)"
               speed={60}
             >
               <StackItem className="icon-[akar-icons--nextjs-fill]" />

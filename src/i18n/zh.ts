@@ -6,12 +6,15 @@ export default {
   },
 
   badgeTitle: '轻量级、开箱即用 🎉',
-  reactSupport: `🔥 现在支持 {{feature}}！`,
+  featureSupport: `🔥 现在支持 {{feature}}！`,
+  lastUpdated: '最后更新于:',
+
+  getStarted: '开始使用',
 
   featureList: [
     {
       title: '先进的技术栈',
-      description: '高效的 React 框架，使用 Next.js、和 Shadcn UI 打造现代化应用',
+      description: '高效的 React (v19) 框架，使用 Next.js、Nextra(v4) 和 Shadcn UI 打造现代化应用',
     },
     {
       title: '国际化支持 (i18n)',
@@ -26,7 +29,7 @@ export default {
       description: '纯 CSS 图标, 集成 Iconify 图标集，提供丰富的图标选择，增强 UI 视觉表现',
     },
     {
-      title: 'Tailwind CSS',
+      title: 'Tailwind CSS (v4)',
       description: '使用原子化 CSS 框架 Tailwind CSS，快速构建高效设计、响应式界面 UI',
     },
     {

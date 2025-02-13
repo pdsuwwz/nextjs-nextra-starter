@@ -34,7 +34,7 @@ export const Section = (props: Props) => {
         <h2 className={cn(
           'relative',
           'text-center font-semibold',
-          'bg-clip-text text-transparent bg-gradient-to-b',
+          'bg-clip-text text-transparent bg-linear-to-b',
           'text-3xl md:text-5xl md:leading-tight pt-4',
           'from-neutral-700 to-black',
           'dark:from-neutral-800 dark:to-white',

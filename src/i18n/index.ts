@@ -7,6 +7,9 @@ export const i18nConfig = Object.freeze({
 })
 
 export type I18nLangKeys = keyof typeof i18nConfig
+export interface I18nLangAsyncProps {
+  lang: I18nLangKeys
+}
 
 // 获取所有语言对象的联合类型
 export type AllLocales = typeof i18nConfig[I18nLangKeys]

@@ -1,8 +1,13 @@
+'use client'
+
 import { Toggle } from '@/components/ui/toggle'
 import { useLocale } from '@/hooks'
+import clsx from 'clsx'
 import { addBasePath } from 'next/dist/client/add-base-path'
-import { useRouter } from 'next/router'
-import { useCallback } from 'react'
+import { usePathname, useRouter } from 'next/navigation'
+import { useCallback, useEffect } from 'react'
+
+const ONE_YEAR = 365 * 24 * 60 * 60 * 1000
 
 /**
  * 快速切换语言组件，用于覆盖 nextra 原生切换下拉框
@@ -13,9 +18,35 @@ export default function LocaleToggle({
   className?: string
 }) {
   const { currentLocale } = useLocale()
-
   const router = useRouter()
-  const { asPath } = router
+  const pathname = usePathname()
+
+  const forceHideBanner = useCallback(() => {
+    const banner = document.querySelector('.nextra-banner')
+    if (!banner) {
+      return
+    }
+
+    const isBannerDismissed = localStorage.getItem('starter-banner')
+    if (isBannerDismissed) {
+      banner.classList.add('x:hidden')
+    }
+  }, [])
+
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach(() => {
+        forceHideBanner()
+      })
+    })
+
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+    forceHideBanner()
+    return () => observer.disconnect()
+  }, [forceHideBanner])
 
   const changeLocale = useCallback(() => {
     // 滚动条位置记录
@@ -27,37 +58,41 @@ export default function LocaleToggle({
       value: '',
     }
     if (currentLocale === 'zh') {
-      nextHref.value = addBasePath(asPath.replace(`/zh`, `/en`))
+      nextHref.value = addBasePath(pathname.replace(`/zh`, `/en`))
     }
     else {
-      nextHref.value = addBasePath(asPath.replace(`/en`, `/zh`))
+      nextHref.value = addBasePath(pathname.replace(`/en`, `/zh`))
     }
 
-    router
-      .replace(nextHref.value)
-      .then(() => {
-        // 滚动条位置恢复
-        if (isAtBottom) {
-          // 如果之前在底部，则依旧滚动到新的底部
-          window.scrollTo(0, document.body.scrollHeight)
-        }
-        else {
-          // 否则，恢复到之前的滚动位置
-          window.scrollTo(0, currentPosition)
-        }
-      })
-  }, [asPath, currentLocale, router])
+    const date = new Date(Date.now() + ONE_YEAR)
+    document.cookie = `NEXT_LOCALE=${currentLocale}; expires=${date.toUTCString()}; path=/`
+
+    router.replace(nextHref.value)
+
+    // 在路由变化后恢复滚动位置
+    requestAnimationFrame(() => {
+      if (isAtBottom) {
+        window.scrollTo(0, document.body.scrollHeight)
+      }
+      else {
+        window.scrollTo(0, currentPosition)
+      }
+    })
+  }, [currentLocale, pathname, router])
 
   return (
     <Toggle
       size="sm"
-      className={className}
+      className={clsx([
+        'cursor-pointer',
+        className,
+      ])}
       onClick={changeLocale}
     >
       {
         currentLocale === 'zh'
-          ? <span className="icon-[uil--letter-chinese-a]"></span>
-          : <span className="icon-[ri--english-input]"></span>
+          ? <span className="icon-[uil--letter-chinese-a]" />
+          : <span className="icon-[ri--english-input]" />
       }
     </Toggle>
   )

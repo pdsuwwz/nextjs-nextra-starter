@@ -6,13 +6,15 @@ export default {
   },
 
   badgeTitle: 'Lightweight & Easy 🎉',
+  featureSupport: `🔥 Now with {{feature}} support!`,
+  lastUpdated: 'Last updated on:',
 
-  reactSupport: `🔥 Now with {{feature}} support!`,
+  getStarted: 'Get Started',
 
   featureList: [
     {
       title: 'Advanced Tech Stack',
-      description: 'Leveraging efficient React frameworks and support with Next.js, and Shadcn UI to build modern applications.',
+      description: 'Leveraging efficient React (v19) and support with Next.js, Nextra(v4) and Shadcn UI to build modern applications.',
     },
     {
       title: 'internationalization (i18n)',
@@ -27,7 +29,7 @@ export default {
       description: 'Integrated with the Iconify icon set, offering a wide range of icons to enhance UI visual presentation.',
     },
     {
-      title: 'Tailwind CSS',
+      title: 'Tailwind CSS (v4)',
       description: 'Atomic CSS integrated with Tailwind CSS, enabling efficient design and responsive UI.',
     },
     {

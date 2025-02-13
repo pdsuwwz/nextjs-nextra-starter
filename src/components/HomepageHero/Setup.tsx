@@ -1,4 +1,6 @@
-import styles from '@/components/HomepageHero/SetupHero.module.scss'
+'use client'
+
+import styles from '@/components/HomepageHero/SetupHero.module.css'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
 import { Button } from '@/components/ui/button'
 import { FlipWords } from '@/components/ui/flip-words'
@@ -42,22 +44,27 @@ export function SetupHero(props: Props) {
 
         <p
           className={clsx([
-            'bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-white shadow-lg',
-            'dark:bg-gradient-to-r dark:from-green-400 dark:via-teal-500 dark:to-cyan-500 dark:text-white',
+            'bg-linear-to-r from-yellow-400 via-orange-500 to-red-500 text-white shadow-lg',
+            'dark:bg-linear-to-r dark:from-green-400 dark:via-teal-500 dark:to-cyan-500 dark:text-white',
             'text-sm mt-2 inline-block px-3 py-1 rounded-lg',
             '[&>span]:font-bold',
             'animate-pulse',
             '[animation-duration:2s]',
           ])}
           dangerouslySetInnerHTML={{
-            __html: t('reactSupport', {
-              feature: `<span>React v19</span>`,
+            __html: t('featureSupport', {
+              feature: `<span>Tailwind CSS v4, Nextra v4</span>`,
             }),
           }}
-        />
+        >
+        </p>
 
 
-        <div className={styles.subtitle}>
+        <div className={clsx([
+          styles.subtitle,
+          'text-neutral-500 dark:text-neutral-300',
+        ])}
+        >
           Template made
           {' '}
           <FlipWords
@@ -112,7 +119,7 @@ export function SetupHero(props: Props) {
               <Link
                 href={`/${currentLocale}/introduction`}
               >
-                Get Started
+                {t('getStarted')}
                 <span className="w-[20px] translate-x-[6px] transition-all group-hover:translate-x-[10px] icon-[mingcute--arrow-right-fill]"></span>
               </Link>
             </Button>

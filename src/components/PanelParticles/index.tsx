@@ -1,3 +1,5 @@
+'use client'
+
 import type { ISourceOptions } from '@tsparticles/engine'
 import Particles, { initParticlesEngine } from '@tsparticles/react'
 import { useTheme } from 'nextra-theme-docs'
@@ -80,7 +82,7 @@ const PanelParticles = () => {
 
   return (
     <Particles
-      className="max-sm:hidden"
+      className="max-sm:hidden pointer-events-none"
       options={options}
     />
   )
