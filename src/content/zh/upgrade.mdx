@@ -1,5 +1,5 @@
 ---
-title: "更新亮点"
+title: "新变化"
 ---
 
 import { Callout } from 'nextra/components'
@@ -16,23 +16,35 @@ import { Callout } from 'nextra/components'
 
 ### Nextra v4 更新要点
 
-Nextra v4 现已完成升级，主要更新：
-- ⚡️ 显著提升了页面加载速度
-- 🎨 优化了主题样式系统
-- 📱 改进了移动端适配
-- 🛠️ 新增更多实用组件
+Nextra v4 现已发布，带来了诸多重要改进和新特性：
+
+- 🚀 **App Router 支持**：全面切换至 Next.js App Router，淘汰 Pages Router，支持最新的 Metadata API。
+- ⚡ **更快的页面加载**：优化后的打包体积与性能，使网站响应更迅速。
+- 🔍 **全新搜索引擎**：基于 Rust 的 Pagefind 提供更精准、更高效的搜索体验。
+- 🏎️ **Turbopack 支持**：改进开发体验，解决长期的社区需求。
+- 🌍 **RSC + i18n**：增强国际化支持，使多语言网站开发更加便捷。
+- 🎨 **优化主题样式**：改进 UI 设计，增强视觉一致性。
+- 📱 **更好的移动端适配**：针对小屏幕设备优化显示效果和交互体验。
+- 📚 **更强大的目录结构**：新的 “Page Map” 支持收集 md/mdx 与 app/ 目录下的 jsx/tsx 页面。
+- 🛠️ **远程 MDX 渲染**：支持从任意内容源加载 MDX，并正确生成侧边栏导航。
+- ✨ **增强的目录 (TOC)**：精确呈现 Markdown 标题，支持 JSX、代码块、数学公式等内容。
 
 详细信息请参考 [Nextra v4 官方升级指南](https://the-guild.dev/blog/nextra-4)
 
 ### Tailwind CSS v4 更新要点
 
-Tailwind CSS v4 升级完成，核心改进：
-- 🚀 全新的 JIT 引擎，编译更快
-- 💎 优化的样式系统，体积更小
-- 🎯 简化的配置方式
-- 📦 更多开箱即用的功能
+Tailwind CSS v4 已正式发布，带来了多个重要的改进和新特性：
 
-更多细节请查看 [Tailwind CSS v4 升级指南](https://tailwindcss.com/docs/upgrade-guide)
+- 🚀 **全新高性能引擎**：完整构建速度提升最多 5 倍，增量构建速度提升超过 100 倍，单位为微秒。 
+- 💎 **为现代 Web 设计**：基于前沿的 CSS 特性构建，如层叠层（cascade layers）、带有 `@property` 的自定义属性和 `color-mix()`。 
+- 🎯 **简化安装过程**：更少的依赖，零配置，只需在你的 CSS 文件中添加一行代码。 
+- 📦 **官方 Vite 插件**：紧密集成，最大化性能并最小化配置。 
+- 🔍 **自动内容检测**：自动发现所有模板文件，无需配置。 
+- 📂 **内置导入支持**：无需额外工具即可捆绑多个 CSS 文件。
+- 🛠️ **CSS 优先配置**：重新构思的开发者体验，直接在 CSS 中自定义和扩展框架，无需 tailwind.config 配置文件。
+
+更多详情，请参考 [Tailwind CSS v4 升级指南](https://tailwindcss.com/docs/upgrade-guide) 和 [官方博客](https://tailwindcss.com/blog/tailwindcss-v4)。
+
 
 ### 迁移说明
 

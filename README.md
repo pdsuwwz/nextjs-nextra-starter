@@ -9,6 +9,13 @@
 
 [🚀 Live Demo 在线体验](https://nextjs-nextra-starter-green.vercel.app)
 
+## 🚀 更新说明
+
+- **Tailwind CSS v4 升级**：全面升级至 Tailwind CSS v4，优化性能并引入新特性。
+- **Nextra v4 重构**：升级至 Nextra v4，提升文档生成效率和开发体验。
+
+👉 [点击查看详细升级说明](https://nextjs-nextra-starter-green.vercel.app/zh/upgrade)
+
 ## 🎉 Features
 
 - ⚡️ **Next.js + TypeScript**: 高效的 React 框架和类型安全支持
@@ -44,6 +51,8 @@ pnpm i
 ```bash
 pnpm dev
 ```
+
+接着用浏览器打开 http://localhost:8000 即可访问服务
 
 ## 使用 Shadcn UI 组件
 
