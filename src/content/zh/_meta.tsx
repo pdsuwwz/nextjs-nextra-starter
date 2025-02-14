@@ -26,7 +26,7 @@ export default {
   upgrade: {
     title: (
       <span className="flex items-center leading-[1]">
-        更新亮点
+        新变化
         <TitleBadge />
       </span>
     ),
