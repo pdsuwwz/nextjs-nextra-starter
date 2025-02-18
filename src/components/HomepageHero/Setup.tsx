@@ -28,7 +28,10 @@ export function SetupHero(props: Props) {
           </a>
         </div>
         <h1 className={styles.headline}>
-          <MotionWrapperFlash className="flex items-center">
+          <MotionWrapperFlash
+            disabledAnimation={false}
+            className="flex items-center"
+          >
             <span className="icon-[emojione-v1--lightning-mood]"></span>
           </MotionWrapperFlash>
           {' '}
