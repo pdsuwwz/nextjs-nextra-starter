@@ -21,6 +21,8 @@ export const StackItem = ({
     <div className={cn(
       'mx-6 size-[50px]',
       'text-neutral-800 dark:text-neutral-100',
+      'transition-all duration-300 transform opacity-75',
+      'hover:scale-125 hover:opacity-100',
       className,
     )}
     >
