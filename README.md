@@ -111,6 +111,21 @@ export default function Home() {
 
 如果你喜欢这个项目或发现有用，可以点右上角 [`Star`](https://github.com/pdsuwwz/nextjs-nextra-starter) 支持一下，你的支持是我们不断改进的动力，感谢！ ^\_^
 
+## 🌟 相关项目
+
+以下是一些开发者和团队正在使用、参考或受本项目启发的项目：
+
+| 项目名                                  | 简介                                                           |
+| --------------------------------------- | -------------------------------------------------------------- |
+| [面试宝典](https://www.codecrack.cn/zh) | 一个免费且深入的八股文网站，帮助开发者提升技术能力并应对面试。 |
+
+### 📢 社区贡献
+
+💡 如果您的项目也在使用或借鉴了本项目，我们诚挚欢迎您：
+
+- 通过提交 [Issue](https://github.com/pdsuwwz/nextjs-nextra-starter/issues) 分享您的项目链接
+- 提交 Pull Request (PR) 将您的项目添加到列表中
+
 ## License
 
 [MIT](./LICENSE) License | Copyright © 2020-PRESENT [Wisdom](https://github.com/pdsuwwz)
