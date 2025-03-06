@@ -34,8 +34,14 @@
 
 ## 运行效果
 
-![image](https://github.com/user-attachments/assets/b28a58c5-91c3-4cbe-b047-1e56c5fcb270)
-![image](https://github.com/user-attachments/assets/7f4ade20-8364-4e25-a5fd-73e42ec7118c)
+![image](https://github.com/user-attachments/assets/f732afa6-5fce-4e4d-af1c-acadd1bf50e7)
+
+![image](https://github.com/user-attachments/assets/5cac69dc-601a-41db-a3aa-d75bad6fc4be)
+
+![image](https://github.com/user-attachments/assets/b655981c-7658-4bf4-a118-82cf96cb1d7a)
+
+![image](https://github.com/user-attachments/assets/b69a5f77-2a76-45b3-8468-11bf8fb1de89)
+
 ![image](https://github.com/user-attachments/assets/a0a07f3f-a457-4521-a45f-4c0f970044f6)
 
 ## 安装和运行
