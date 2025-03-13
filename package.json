@@ -13,6 +13,10 @@
   "bugs": {
     "url": "https://github.com/pdsuwwz/nextjs-nextra-starter/issues"
   },
+  "engines": {
+    "node": ">=20.x",
+    "pnpm": ">=9.x"
+  },
   "scripts": {
     "dev": "next dev --turbopack -p 8000",
     "build": "next build",
