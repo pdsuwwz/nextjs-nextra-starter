@@ -1,5 +1,7 @@
 # Nextjs Nextra Starter
 
+中文 | [English](README-en.md)
+
 [![Deploy](https://img.shields.io/badge/passing-black?style=flat&logo=Netlify&label=Netlify&color=3bb92c&labelColor=black)](https://github.com/pdsuwwz/nextjs-nextra-starter/deployments)
 [![GitHub Workflow Status (branch)](https://img.shields.io/badge/passing-black?style=flat&label=build&color=3bb92c)](https://github.com/pdsuwwz/nextjs-nextra-starter/deployments/Production)
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
@@ -14,7 +16,7 @@
 - **Tailwind CSS v4 升级**：全面升级至 Tailwind CSS v4，优化性能并引入新特性。
 - **Nextra v4 重构**：升级至 Nextra v4，提升文档生成效率和开发体验。
 
-👉 [点击查看详细升级说明](https://nextjs-nextra-starter-green.vercel.app/zh/upgrade)
+👉 [点击查看详细升级说明](https://nextjs-nextra.netlify.app/zh/upgrade)
 
 ## 🎉 Features
 
@@ -68,7 +70,7 @@ pnpm dev
 
 首次执行 `pnpm dlx shadcn@latest init` 命令初始化 `Shadcn UI` 基本项目结构（如果尚未初始化）
 
-💡 注意
+> [!IMPORTANT]
 
 > 该初始化命令用于创建 `Shadcn UI` 的基本项目结构
 >
