@@ -9,11 +9,12 @@ import { useServerLocale } from '@/hooks'
 import LocaleToggle from '@/widgets/locale-toggle'
 import ThemeToggle from '@/widgets/theme-toggle'
 import { GoogleAnalytics } from '@next/third-parties/google'
+import Script from 'next/script'
 import { Footer, LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
-import { getDictionary, getDirection } from '../_dictionaries/get-dictionary'
 
+import { getDictionary, getDirection } from '../_dictionaries/get-dictionary'
 import { ThemeProvider } from './_components/ThemeProvider'
 import './styles/index.css'
 
@@ -66,6 +67,25 @@ const CustomNavbar = async ({ lang }: I18nLangAsyncProps) => {
     </Navbar>
   )
 }
+
+const BaiduTrack = () => {
+  return (
+    <>
+      <Script strategy="afterInteractive">
+        {`
+          var _hmt = _hmt || [];
+          (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?d5ad5e04e6af914c01767926567602be";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+          })();
+        `}
+      </Script>
+    </>
+  )
+}
+
 
 interface Props {
   children: ReactNode
@@ -142,6 +162,7 @@ export default async function RootLayout({ children, params }: Props) {
         </ThemeProvider>
       </body>
       <GoogleAnalytics gaId="G-VCR6017LB8" />
+      <BaiduTrack />
     </html>
   )
 }
