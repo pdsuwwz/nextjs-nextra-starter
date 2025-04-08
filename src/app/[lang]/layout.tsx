@@ -1,12 +1,14 @@
 import type { I18nLangAsyncProps, I18nLangKeys } from '@/i18n'
 
 import type { Metadata } from 'next'
-import type { ReactNode } from 'react'
 
+import type { ReactNode } from 'react'
 import { CustomFooter } from '@/components/CustomFooter'
+
 import { useServerLocale } from '@/hooks'
 import LocaleToggle from '@/widgets/locale-toggle'
 import ThemeToggle from '@/widgets/theme-toggle'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Footer, LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
@@ -139,6 +141,7 @@ export default async function RootLayout({ children, params }: Props) {
           </Layout>
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-VCR6017LB8" />
     </html>
   )
 }
