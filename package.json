@@ -57,6 +57,7 @@
     "@eslint/compat": "^1.2.7",
     "@iconify/json": "^2.2.321",
     "@iconify/tailwind4": "^1.0.6",
+    "@next/third-parties": "^15.2.4",
     "@svgr/core": "^8.1.0",
     "@svgr/plugin-jsx": "^8.1.0",
     "@svgr/plugin-svgo": "^8.1.0",
