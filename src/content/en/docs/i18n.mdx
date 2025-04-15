@@ -1,0 +1,210 @@
+import { FileTree } from 'nextra/components'
+
+# i18n Support
+
+This project provides two approaches for internationalization:
+1. Nextra's built-in folder structure internationalization
+2. Custom i18n implementation for components and client-side content
+
+## Nextra's Built-in Internationalization Support
+
+Nextra supports multilingual content through folder structure. In the project root directory, you can create folders for different languages, such as:
+
+<FileTree>
+  <FileTree.Folder name="src" defaultOpen>
+    <FileTree.Folder name="content" defaultOpen>
+      <FileTree.Folder name="en" defaultOpen>
+        <FileTree.File name="_meta.tsx" active />
+        <FileTree.File name="index.mdx" />
+        <FileTree.File name="introduction.mdx" />
+      </FileTree.Folder>
+      <FileTree.Folder name="zh" defaultOpen>
+        <FileTree.File name="_meta.tsx" active />
+        <FileTree.File name="index.mdx" />
+        <FileTree.File name="introduction.mdx" />
+      </FileTree.Folder>
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+You can configure the language switcher via the `_meta.tsx` file:
+
+```tsx
+import type { MetaRecord } from 'nextra'
+
+export default {
+  index: {
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+      layout: 'full',
+      toc: false,
+    },
+  },
+  introduction: {
+    type: 'page',
+    theme: {
+      navbar: true,
+      toc: false,
+    },
+  },
+} satisfies MetaRecord
+```
+
+## Custom i18n Implementation
+
+For components and client-side content, we've implemented a type-safe internationalization solution.
+
+### Directory Structure
+
+<FileTree>
+  <FileTree.Folder name="src" defaultOpen>
+    <FileTree.Folder name="i18n" defaultOpen>
+      <FileTree.File name="index.ts" comment="Core functionality and type definitions" />
+      <FileTree.File name="en.ts" comment="English JSON language pack" />
+      <FileTree.File name="zh.ts" comment="Chinese JSON language pack" />
+    </FileTree.Folder>
+    <FileTree.Folder name="hooks" defaultOpen>
+      <FileTree.File name="useLocale.ts" comment="Pre-packaged common hooks" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+### Language File Example
+
+The language file structure is as follows (using [`en.ts`](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/src/i18n/en.ts) as an example):
+
+```typescript
+export default {
+  systemTitle: '🚀 My Nextra Starter',
+  banner: {
+    title: '👋 Hey there! Welcome to the Next.js Starter.',
+    more: 'Check it out',
+  },
+
+  badgeTitle: 'Lightweight & Easy 🎉',
+  featureSupport: `🔥 Now with {{feature}} support!`,
+  lastUpdated: 'Last updated on:',
+
+  getStarted: 'Get Started',
+  // ...
+}
+```
+
+### Usage
+
+#### 1. In Components
+
+```tsx
+import { useLocale } from '@/hooks'
+
+function MyComponent() {
+  const { t, currentLocale } = useLocale()
+  
+  return (
+    <div>
+      <h1>{t('home.systemTitle')}</h1>
+      
+      {/* Using variable interpolation */}
+      <div dangerouslySetInnerHTML={{
+        __html: t('home.featureSupport', {
+          feature: '<span>Tailwind CSS v4, Nextra v4</span>',
+        }),
+      }} />
+    </div>
+  )
+}
+```
+
+#### 2. Dynamic Language Switching
+
+Switch languages via URL paths (e.g., [`/en/introduction`](/en/introduction) and [`/zh/introduction`](/zh/introduction)). The current language is automatically obtained from the URL parameter.
+
+## Type Safety
+
+Our i18n implementation provides complete type safety support:
+
+1. **Auto-completion:** The editor automatically suggests all available translation keys
+2. **Type checking:** Using incorrect keys triggers TypeScript errors
+3. **Nested key support:** Supports dot notation access like `home.title`
+4. **Variable interpolation:** Can use `{{variable}}` syntax in translations
+
+## Advanced Features
+
+### Nested Value Retrieval
+
+The `getNestedValue` function can retrieve nested values from an object based on dot notation paths:
+
+```typescript
+const value = getNestedValue(i18nConfig[currentLocale], 'home.title')
+```
+
+### String Interpolation
+
+The `interpolateString` function supports inserting variables into translation strings:
+
+```typescript
+const result = interpolateString(
+  'Supports {{feature}}', 
+  { feature: 'Tailwind CSS v4' }
+) // "Supports Tailwind CSS v4"
+```
+
+### Custom Hooks
+
+The `useLocale` hook encapsulates language detection and translation functionality, providing:
+
+- `currentLocale`: Current language code
+- `t`: Translation function, supports variable interpolation
+
+## Best Practices
+
+1. **Organize translation files:** Use nested objects to group related translations
+2. **Avoid hardcoded strings:** Always use the `t()` function instead of hardcoded text
+3. **Set default language:** Ensure there's a fallback mechanism for the default language
+4. **Maintain key consistency:** All language files should contain the same keys
+5. **Use TypeScript:** Leverage the type system to ensure translation completeness and correctness
+
+## Practical Example
+
+Here's an example of using i18n in the `SetupHero` component:
+
+```tsx
+'use client'
+
+import { useLocale } from '@/hooks'
+
+export function SetupHero() {
+  const { t, currentLocale } = useLocale()
+
+  return (
+    <div>
+      <a href="https://github.com/pdsuwwz/nextjs-nextra-starter">
+        {t('badgeTitle')}
+      </a>
+      
+      <Link href={`/${currentLocale}/upgrade`}>
+        <span dangerouslySetInnerHTML={{
+          __html: t('featureSupport', {
+            feature: `<span>Tailwind CSS v4, Nextra v4</span>`,
+          }),
+        }} />
+      </Link>
+      
+      <Button asChild>
+        <Link href={`/${currentLocale}/introduction`}>
+          {t('getStarted')}
+        </Link>
+      </Button>
+    </div>
+  )
+}
+```
+
+## Further Extensions
+
+- **Language detection:** Add automatic language detection based on browser or user preferences
+- **Number and date formatting:** Integrate the `Intl` API for localized formatting
+- **Pluralization:** Add support for different language pluralization rules
+- **Translation management interface:** Create translation management tools for content editors

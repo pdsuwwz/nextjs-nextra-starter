@@ -19,8 +19,8 @@ export default {
       toc: false,
     },
   },
-  examples: {
-    title: 'Examples',
+  docs: {
+    title: '📦 Some Examples',
     type: 'page',
   },
   upgrade: {

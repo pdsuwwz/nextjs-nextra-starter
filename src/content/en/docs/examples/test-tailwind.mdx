@@ -1,0 +1,97 @@
+# Tailwind CSS Example
+
+## Card Component
+
+Here's an example of a classic card component. It uses Tailwind CSS's utility classes to quickly build responsive layouts, including shadows, rounded corners, and some padding, making it look more elegant and modern.
+
+<div className="my-5 max-w-md mx-auto bg-foreground dark:bg-neutral-600 rounded-xl shadow-md border p-6">
+  <h3 className="text-lg font-semibold text-zinc-200 mb-2">Classic Card</h3>
+  <div className="text-zinc-200 mb-4">
+    Using Tailwind CSS, you can quickly build responsive card components with great default styles and extensibility.
+  </div>
+  <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+    Action Button
+  </button>
+</div>
+
+## Button State Demo
+
+Here are some examples of different button states, including default, disabled, and success/warning buttons. All buttons use Tailwind CSS's interaction state classes, such as `hover` and `disabled`, to achieve different visual effects.
+
+<div className="my-5 flex gap-4 flex-wrap">
+  <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">Default</button>
+  <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded cursor-not-allowed" disabled>Disabled</button>
+  <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Success</button>
+  <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Warning</button>
+</div>
+
+## Alert (Prompt) 
+
+Alert boxes are used to notify users of important information or warnings. By using Tailwind CSS's background colors and border styles, you can easily create different types of alert boxes.
+
+<div className="my-5 max-w-md mx-auto">
+  <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4">
+    <p className="font-bold">Information Prompt:</p>
+    <p>This is an information prompt box, suitable for showing normal notification information.</p>
+  </div>
+  <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-4">
+    <p className="font-bold">Warning Prompt:</p>
+    <p>This is a warning prompt box, suitable for showing important warning information.</p>
+  </div>
+  <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mt-4">
+    <p className="font-bold">Error Prompt:</p>
+    <p>This is an error prompt box, suitable for showing error information or requiring correction.</p>
+  </div>
+</div>
+
+## Tags (Labels)
+
+Tag components can be used to display the classification or tags of content, helping users quickly understand the type or theme of the content.
+
+<div className="my-5 mx-auto">
+  <div className="space-x-2">
+    <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">Tag 1</span>
+    <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">Tag 2</span>
+    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full">Tag 3</span>
+  </div>
+</div>
+
+## Responsive Layout Grid
+
+Responsive layout grids can automatically adjust the display based on different screen sizes. By using Tailwind CSS's `grid` class, you can easily create flexible layouts that adapt to desktop, tablet, and mobile devices.
+
+<div className="my-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div className="bg-accent p-4 rounded shadow text-center">Block 1</div>
+  <div className="bg-accent p-4 rounded shadow text-center">Block 2</div>
+  <div className="bg-accent p-4 rounded shadow text-center">Block 3</div>
+  <div className="bg-accent p-4 rounded shadow text-center">Block 4</div>
+  <div className="bg-accent p-4 rounded shadow text-center">Block 5</div>
+  <div className="bg-accent p-4 rounded shadow text-center">Block 6</div>
+  <div className="bg-accent p-4 rounded shadow text-center">Block 7</div>
+</div>
+
+## Typography (Prose)
+
+Tailwind CSS's Typography plugin (`@tailwindcss/typography`) provides excellent typographic styles, especially for Markdown content. Using the `prose` class, you can make text, lists, quotes, and code blocks look beautiful and elegant.
+
+<div className="my-5 mx-auto prose dark:prose-invert max-w-3xl">
+  <h3>Supported Typography Content</h3>
+  <div>
+    Using Tailwind's Typography plugin, you can make originally unstyled Markdown content look great with default typography.
+  </div>
+  <ol>
+    <li>List item example 1</li>
+    <li>List item example 2</li>
+    <li>List item example 3</li>
+  </ol>
+  <blockquote>
+    Do what you should do, and let time take care of the rest.
+  </blockquote>
+  <div>
+    You can insert an inline code snippet:
+    <br />
+    e.g. <code>npm install tailwindcss</code>
+  </div>
+
+  <div>👉 More content can be found at the <a href="https://tailwindcss.com/docs" target="_blank">Tailwind official documentation</a>.</div>
+</div>

@@ -11,6 +11,13 @@ export default {
 
   getStarted: '开始使用',
 
+  themeSwitcher: {
+    light: '浅色模式',
+    dark: '深色模式',
+    lightAria: '切换到浅色模式',
+    darkAria: '切换到深色模式',
+  },
+
   featureList: [
     {
       title: '先进的技术栈',
