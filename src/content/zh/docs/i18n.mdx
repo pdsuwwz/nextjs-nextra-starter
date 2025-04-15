@@ -1,0 +1,210 @@
+import { FileTree } from 'nextra/components'
+
+# 国际化支持 (i18n)
+
+本项目提供了两种国际化实现方式：
+1. Nextra 内置的文件夹结构国际化
+2. 自定义 i18n 实现，用于组件和客户端内容
+
+## Nextra 内置的国际化支持
+
+Nextra 通过文件夹结构来支持多语言内容。在项目根目录下，您可以创建不同语言的文件夹，如：
+
+<FileTree>
+  <FileTree.Folder name="src" defaultOpen>
+    <FileTree.Folder name="content" defaultOpen>
+      <FileTree.Folder name="en" defaultOpen>
+        <FileTree.File name="_meta.tsx" active />
+        <FileTree.File name="index.mdx" />
+        <FileTree.File name="introduction.mdx" />
+      </FileTree.Folder>
+      <FileTree.Folder name="zh" defaultOpen>
+        <FileTree.File name="_meta.tsx" active />
+        <FileTree.File name="index.mdx" />
+        <FileTree.File name="introduction.mdx" />
+      </FileTree.Folder>
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+可以通过 `_meta.tsx` 文件配置语言切换器:
+
+```tsx
+import type { MetaRecord } from 'nextra'
+
+export default {
+  index: {
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      timestamp: false,
+      layout: 'full',
+      toc: false,
+    },
+  },
+  introduction: {
+    type: 'page',
+    theme: {
+      navbar: true,
+      toc: false,
+    },
+  },
+} satisfies MetaRecord
+```
+
+## 自定义 i18n 实现
+
+对于组件和客户端内容，我们实现了类型安全的国际化解决方案。
+
+### 目录结构
+
+<FileTree>
+  <FileTree.Folder name="src" defaultOpen>
+    <FileTree.Folder name="i18n" defaultOpen>
+      <FileTree.File name="index.ts" comment="核心功能和类型定义" />
+      <FileTree.File name="en.ts" comment="英文 json 语言包" />
+      <FileTree.File name="zh.ts" comment="中文 json 语言包" />
+    </FileTree.Folder>
+    <FileTree.Folder name="hooks" defaultOpen>
+      <FileTree.File name="useLocale.ts" comment="封装好的通用 Hooks" />
+    </FileTree.Folder>
+  </FileTree.Folder>
+</FileTree>
+
+### 语言文件示例
+
+语言文件结构如下（以 [`zh.ts`](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/src/i18n/zh.ts) 为例）：
+
+```typescript
+export default {
+  systemTitle: '🚀 Nextra 启动模板',
+  banner: {
+    title: '👋 嘿，欢迎来到 Next.js 起步模板!',
+    more: '了解详情',
+  },
+
+  badgeTitle: '轻量级、开箱即用 🎉',
+  featureSupport: `🔥 现在支持 {{feature}}！`,
+  lastUpdated: '最后更新于:',
+
+  getStarted: '开始使用',
+  // ...
+}
+```
+
+### 使用方法
+
+#### 1. 在组件中使用
+
+```tsx
+import { useLocale } from '@/hooks'
+
+function MyComponent() {
+  const { t, currentLocale } = useLocale()
+  
+  return (
+    <div>
+      <h1>{t('home.systemTitle')}</h1>
+      
+      {/* 使用变量插值 */}
+      <div dangerouslySetInnerHTML={{
+        __html: t('home.featureSupport', {
+          feature: '<span>Tailwind CSS v4, Nextra v4</span>',
+        }),
+      }} />
+    </div>
+  )
+}
+```
+
+#### 2. 动态切换语言
+
+通过 URL 路径切换语言（例如 [`/en/introduction`](/en/introduction) 和 [`/zh/introduction`](/zh/introduction)）。当前语言会从 URL 参数中自动获取。
+
+## 类型安全
+
+我们的 i18n 实现提供了完整的类型安全支持：
+
+1. **自动补全：** 编辑器中会自动提示所有可用的翻译键
+2. **类型检查：** 使用错误的键会触发 TypeScript 错误
+3. **嵌套键支持：** 支持如 `home.title` 的点表示法访问
+4. **变量插值：** 可以在翻译中使用 `{{variable}}` 语法
+
+## 高级功能
+
+### 嵌套值获取
+
+`getNestedValue` 函数可以根据点表示法路径获取对象中的嵌套值：
+
+```typescript
+const value = getNestedValue(i18nConfig[currentLocale], 'home.title')
+```
+
+### 字符串插值
+
+`interpolateString` 函数支持在翻译字符串中插入变量：
+
+```typescript
+const result = interpolateString(
+  '支持 {{feature}}', 
+  { feature: 'Tailwind CSS v4' }
+) // "支持 Tailwind CSS v4"
+```
+
+### 自定义 Hooks
+
+`useLocale` Hooks 封装了语言检测和翻译功能，提供：
+
+- `currentLocale`: 当前语言代码
+- `t`: 翻译函数，支持变量插值
+
+## 最佳实践
+
+1. **组织翻译文件：** 使用嵌套对象将相关翻译分组
+2. **避免硬编码字符串：** 总是使用 `t()` 函数而不是硬编码文本
+3. **设置默认语言：** 确保有默认语言回退机制
+4. **保持键的一致性：** 所有语言文件中应包含相同的键
+5. **使用 TypeScript：** 利用类型系统确保翻译的完整性和正确性
+
+## 实战示例
+
+以下是 `SetupHero` 组件中使用 i18n 的示例：
+
+```tsx
+'use client'
+
+import { useLocale } from '@/hooks'
+
+export function SetupHero() {
+  const { t, currentLocale } = useLocale()
+
+  return (
+    <div>
+      <a href="https://github.com/pdsuwwz/nextjs-nextra-starter">
+        {t('badgeTitle')}
+      </a>
+      
+      <Link href={`/${currentLocale}/upgrade`}>
+        <span dangerouslySetInnerHTML={{
+          __html: t('featureSupport', {
+            feature: `<span>Tailwind CSS v4, Nextra v4</span>`,
+          }),
+        }} />
+      </Link>
+      
+      <Button asChild>
+        <Link href={`/${currentLocale}/introduction`}>
+          {t('getStarted')}
+        </Link>
+      </Button>
+    </div>
+  )
+}
+```
+
+## 进一步扩展
+
+- **语言检测：** 添加基于浏览器或用户偏好的自动语言检测
+- **数字和日期格式化：** 集成 `Intl` API 进行本地化格式化
+- **多元复数：** 添加对不同语言复数规则的支持
+- **翻译管理界面：** 为内容编辑者创建翻译管理工具

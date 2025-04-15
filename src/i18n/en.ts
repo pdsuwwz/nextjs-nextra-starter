@@ -11,6 +11,13 @@ export default {
 
   getStarted: 'Get Started',
 
+  themeSwitcher: {
+    light: 'Light Mode',
+    dark: 'Dark Mode',
+    lightAria: 'Switch to light mode',
+    darkAria: 'Switch to dark mode',
+  },
+
   featureList: [
     {
       title: 'Advanced Tech Stack',

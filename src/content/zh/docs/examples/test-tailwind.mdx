@@ -1,0 +1,102 @@
+# Tailwind CSS 示例
+
+## 卡片组件
+
+在这里，我们展示了一个经典的卡片组件。它使用了 Tailwind CSS 的工具类来快速构建响应式布局，包含了阴影、圆角和一些内边距等样式，使其看起来更具层次感和现代感。
+
+<div className="my-5 max-w-md mx-auto bg-foreground dark:bg-neutral-600 rounded-xl shadow-md border p-6">
+  <h3 className="text-lg font-semibold text-zinc-200 mb-2">经典卡片</h3>
+  <div className="text-zinc-200 mb-4">
+    使用 Tailwind CSS 可以快速构建响应式卡片组件，具备良好的默认样式和扩展性。
+  </div>
+  <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
+    操作按钮
+  </button>
+</div>
+
+## 按钮状态演示
+
+这里展示了几个不同状态的按钮，包括默认状态、禁用状态和成功/警告按钮。所有按钮都使用了 Tailwind CSS 的交互状态类，例如 `hover` 和 `disabled`，以实现不同的视觉效果。
+
+<div className="my-5 flex gap-4 flex-wrap">
+  <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">默认</button>
+  <button className="bg-gray-300 text-gray-700 px-4 py-2 rounded cursor-not-allowed" disabled>禁用</button>
+  <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">成功</button>
+  <button className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">警告</button>
+</div>
+
+## 提示框（Alert）
+
+提示框是通知用户的重要信息或警告的组件。通过 Tailwind CSS 的背景色和边框样式，可以轻松制作不同类型的提示框。
+
+<div className="my-5 max-w-md mx-auto">
+  <div className="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4">
+    <p className="font-bold">信息提示：</p>
+    <p>这是一个信息提示框，适用于展示普通的通知信息。</p>
+  </div>
+
+  <div className="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 mt-4">
+    <p className="font-bold">警告提示：</p>
+    <p>这是一个警告提示框，适用于展示重要警告信息。</p>
+  </div>
+
+  <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 mt-4">
+    <p className="font-bold">错误提示：</p>
+    <p>这是一个错误提示框，适用于展示错误信息或需要修正的操作。</p>
+  </div>
+</div>
+
+## 标签组件（Tags）
+
+标签组件可以用来展示内容的分类或标签，帮助用户快速了解内容的类型或主题。
+
+<div className="my-5 mx-auto">
+  <div className="space-x-2">
+    <span className="inline-block bg-blue-100 text-blue-800 text-xs font-semibold px-2 py-1 rounded-full">标签 1</span>
+    <span className="inline-block bg-green-100 text-green-800 text-xs font-semibold px-2 py-1 rounded-full">标签 2</span>
+    <span className="inline-block bg-yellow-100 text-yellow-800 text-xs font-semibold px-2 py-1 rounded-full">标签 3</span>
+  </div>
+</div>
+
+## 响应式布局网格
+
+响应式布局网格可以根据不同屏幕尺寸自动调整显示方式。通过使用 Tailwind CSS 的 `grid` 类，你可以方便地创建灵活的布局，适应桌面、平板和手机等不同设备。
+
+<div className="my-5 mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+  <div className="bg-accent p-4 rounded shadow text-center">区块 1</div>
+  <div className="bg-accent p-4 rounded shadow text-center">区块 2</div>
+  <div className="bg-accent p-4 rounded shadow text-center">区块 3</div>
+  <div className="bg-accent p-4 rounded shadow text-center">区块 4</div>
+  <div className="bg-accent p-4 rounded shadow text-center">区块 5</div>
+  <div className="bg-accent p-4 rounded shadow text-center">区块 6</div>
+  <div className="bg-accent p-4 rounded shadow text-center">区块 7</div>
+</div>
+
+## 排版样式（Prose）
+
+Tailwind CSS 的 Typography 插件（`@tailwindcss/typography`）为你提供了精美的排版样式，特别适用于 Markdown 内容。使用 `prose` 类，你可以让文本、列表、引用和代码块等内容呈现出优雅的样式。
+
+<div className="my-5 mx-auto prose dark:prose-invert max-w-3xl">
+  <h3>支持的排版内容</h3>
+  <div>
+    使用 Tailwind 的 Typography 插件，可以让原本没有样式的 Markdown 内容拥有很棒的默认排版。
+  </div>
+
+  <ol>
+    <li>列表项示例一</li>
+    <li>列表项示例二</li>
+    <li>列表项示例三</li>
+  </ol>
+
+  <blockquote>
+    做你该做的事，其他的交给时间 ~
+  </blockquote>
+
+  <div>
+    你可以插入一段内联代码：
+    
+    比如 <code>npm install tailwindcss</code>
+  </div>
+
+  <div>👉 更多内容请访问 <a href="https://tailwindcss.com/docs" target="_blank">Tailwind 官方文档</a>。</div>
+</div>

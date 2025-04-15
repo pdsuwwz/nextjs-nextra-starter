@@ -13,14 +13,13 @@ export default {
   },
   introduction: {
     type: 'page',
-    title: '这是介绍',
     theme: {
       navbar: true,
       toc: false,
     },
   },
-  examples: {
-    title: '示例',
+  docs: {
+    title: '📦 示例代码',
     type: 'page',
   },
   upgrade: {
