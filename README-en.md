@@ -135,6 +135,25 @@ Here are some projects that developers and teams are using, referencing, or insp
 - Share your project link by submitting an [Issue](https://github.com/pdsuwwz/nextjs-nextra-starter/issues)
 - Submit a Pull Request (PR) to add your project to the list
 
+## 🚨 Disclaimer
+
+This template is provided as a technical reference solution. Users must acknowledge the following risks and obligations:
+
+- **Technical Risks**:
+  Dependent frameworks (Next.js/Nextra/Tailwind CSS) carry version iteration risks. Third-party components (e.g. Shadcn UI) follow their original repositories' specifications. Environment configuration changes may cause unforeseen build exceptions
+
+- **Usage Restrictions**:
+  Prohibited for use in scenarios violating open-source licenses or applicable laws/regulations. Users must conduct independent code security audits and production environment validation
+
+- **Liability Exclusion**:
+  No guarantees are provided regarding:
+
+1. Business applicability of technical solutions
+2. Security assurance of dependencies
+3. Official customization support
+
+Users assume full responsibility for any direct/indirect consequences arising from usage or modifications. Continued use constitutes acceptance of these terms
+
 ## License
 
 [MIT](./LICENSE) License | Copyright © 2020-PRESENT [Wisdom](https://github.com/pdsuwwz)
