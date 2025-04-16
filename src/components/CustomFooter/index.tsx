@@ -58,7 +58,13 @@ export function CustomFooter() {
           </span>
           <UnderlineLink
             link="https://github.com/pdsuwwz"
-            label="Wisdom"
+            label={(
+              <>
+                <span className="animate-[heartbeat_1.5s_infinite] mr-[3px]">❤️</span>
+                {' '}
+                Wisdom
+              </>
+            )}
           />
         </div>
 

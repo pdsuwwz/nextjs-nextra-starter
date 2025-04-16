@@ -136,6 +136,25 @@
     @apply mx-0 px-4;
   }
 }
+
+@keyframes heartbeat {
+  0%,100% {
+    transform: scale(.75)
+  }
+  20% {
+    transform: scale(1)
+  }
+  40% {
+    transform: scale(.75)
+  }
+  60% {
+    transform: scale(1)
+  }
+  80% {
+    transform: scale(.75)
+  }
+}
+
 /*
   ---break---
 */
