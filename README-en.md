@@ -9,7 +9,8 @@ English | [中文](README.md)
 
 ⚡️ Fast Template Starter - React v19 + Next.js + Nextra (v4) + TypeScript + TailwindCSS (v4) + Shadcn UI
 
-[🚀 Live Demo](https://nextjs-nextra.netlify.app/en)
+- [🚀 Live Demo](https://nextjs-nextra.netlify.app/en)
+- [✨ Alternative address](https://nextjs-nextra-starter-green.vercel.app/en)
 
 ## 🚀 What's New
 
