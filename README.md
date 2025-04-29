@@ -1,8 +1,9 @@
 <p style="text-align:center;" align="center"><a href="https://github.com/pdsuwwz/nextjs-nextra-starter"><picture align="center">
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/b8dda962-e106-4888-af22-13dada3fac49"  width="100%" align="center" style="margin-bottom:20px;">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/ecf06bdc-a207-4206-b779-464090fae1f4" width="100%" align="center" style="margin-bottom:20px;">
-  <img alt="color mode" src="https://github.com/user-attachments/assets/b8dda962-e106-4888-af22-13dada3fac49" width="100%" align="center" style="margin-bottom:20px;">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/user-attachments/assets/3e12e6ba-aaca-46fd-a019-16cbe81ae58d"  width="100%" align="center" style="margin-bottom:20px;">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/user-attachments/assets/6cabecf7-1106-4a7f-bc63-0b18797334f0" width="100%" align="center" style="margin-bottom:20px;">
+  <img alt="color mode" src="https://github.com/user-attachments/assets/6cabecf7-1106-4a7f-bc63-0b18797334f0" width="100%" align="center" style="margin-bottom:20px;">
 </picture></a><br /><br /></p>
+
 
 # Nextjs Nextra Starter
 
