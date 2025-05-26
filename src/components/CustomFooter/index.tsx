@@ -1,9 +1,9 @@
 import type { ReactNode } from 'react'
+import Link from 'next/link'
 import { Separator } from '@/components/ui/separator'
 import { cn } from '@/lib/utils'
 import LocaleToggle from '@/widgets/locale-toggle'
 import ThemeToggle from '@/widgets/theme-toggle'
-import Link from 'next/link'
 
 const UnderlineLink = ({
   link,

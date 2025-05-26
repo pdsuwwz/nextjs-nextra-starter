@@ -1,13 +1,13 @@
 'use client'
 
+import clsx from 'clsx'
+import Link from 'next/link'
 import styles from '@/components/HomepageHero/SetupHero.module.css'
 import { MotionWrapperFlash } from '@/components/MotionWrapper/Flash'
 import { Button } from '@/components/ui/button'
 import { FlipWords } from '@/components/ui/flip-words'
 import { LinkPreview } from '@/components/ui/link-preview'
 import { useLocale } from '@/hooks'
-import clsx from 'clsx'
-import Link from 'next/link'
 
 interface Props {
 }

@@ -1,10 +1,10 @@
 'use client'
 
 import type { TargetAndTransition } from 'framer-motion'
-import { useBreakpoint } from '@/hooks'
-import { cn } from '@/lib/utils'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import { useBreakpoint } from '@/hooks'
+import { cn } from '@/lib/utils'
 
 export const FlipWords = ({
   words,

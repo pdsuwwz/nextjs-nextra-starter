@@ -1,9 +1,9 @@
 'use client'
 
-import { Button } from '@/components/ui/button'
-import { useLocale } from '@/hooks'
 import { Moon, Sun } from 'lucide-react'
 import { useTheme } from 'nextra-theme-docs'
+import { Button } from '@/components/ui/button'
+import { useLocale } from '@/hooks'
 
 export const ThemeSwitcher = () => {
   const { setTheme } = useTheme()

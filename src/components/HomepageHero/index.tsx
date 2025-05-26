@@ -1,13 +1,13 @@
 'use client'
 
+import { useTheme } from 'nextra-theme-docs'
+import { useMemo } from 'react'
+import Marquee from 'react-fast-marquee'
 import { PanelParticles } from '@/components/PanelParticles'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
 import { HoverEffect } from '@/components/ui/card-hover-effect'
 import { useLocale } from '@/hooks'
 import { cn } from '@/lib/utils'
-import { useTheme } from 'nextra-theme-docs'
-import { useMemo } from 'react'
-import Marquee from 'react-fast-marquee'
 import { Section } from './Section'
 import { SetupHero } from './Setup'
 
