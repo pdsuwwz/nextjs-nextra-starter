@@ -130,9 +130,10 @@ If you like this project or find it useful, you can click the [`Star`](https://g
 
 Here are some projects that developers and teams are using, referencing, or inspired by this project:
 
-| Project Name                             | Description                                                                                                                     |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [CodeCrack](https://www.codecrack.cn/en) | A free and in-depth interview preparation website helping developers improve their technical skills and prepare for interviews. |
+| Project Name                              | Description                                                                                                                     |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| [Talking Web3](https://talkingweb3.io/en) | A Web3 project accelerator dedicated to creating outstanding Web3 projects.                                                     |
+| [CodeCrack](https://www.codecrack.cn/en)  | A free and in-depth interview preparation website helping developers improve their technical skills and prepare for interviews. |
 
 ### 📢 Community Contributions
 
