@@ -174,10 +174,11 @@ Right now, my bug count is still higher than my star count 😭
 
 Here are some projects that developers and teams are using, referencing, or inspired by this project:
 
-| Project Name                              | Description                                                                                                                     |
-| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
-| [Talking Web3](https://talkingweb3.io/en) | A Web3 project accelerator dedicated to creating outstanding Web3 projects.                                                     |
-| [CodeCrack](https://www.codecrack.cn/en)  | A free and in-depth interview preparation website helping developers improve their technical skills and prepare for interviews. |
+| Project Name                                                           | Description                                                                                                                       |
+| ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [EdgeOne Saas Starter](https://github.com/TencentEdgeOne/saas-starter) | [The fastest way to create and deploy your SaaS product with EdgeOne and Tencent Cloud](https://saas-starter-docs.edgeone.app/en) |
+| [Talking Web3](https://talkingweb3.io/en)                              | A Web3 project accelerator dedicated to creating outstanding Web3 projects.                                                       |
+| [CodeCrack](https://www.codecrack.cn/en)                               | A free and in-depth interview preparation website helping developers improve their technical skills and prepare for interviews.   |
 
 ### 📢 Community Contributions
 
