@@ -16,7 +16,33 @@ English | [中文](README.md)
 ⚡️ Fast Template Starter - React v19 + Next.js + Nextra (v4) + TypeScript + TailwindCSS (v4) + Shadcn UI
 
 - [🚀 Live Demo](https://nextjs-nextra.netlify.app/en)
-- [✨ Alternative address](https://nextjs-nextra-starter-green.vercel.app/en)
+- [✨ Alternative address 1](https://nextjs-nextra-starter-green.vercel.app/en)
+- [✨ Alternative address 2](https://nextra.likemashang.com/en)
+
+## 🛠️ Maintenance Commitment
+
+<div align="center">
+
+<table>
+  <tr>
+    <td><strong>🔄 Continuous update</strong><br/>Dependency and features are updated irregularly</td>
+    <td><strong>🐛 Fast Response</strong><br/>Reply within 2 hours on average Issue</td>
+  </tr>
+  <tr>
+    <td><strong>💎 Elaboration</strong><br/>Spend 100+ hours to perfect template details</td>
+    <td><strong>🛡️ Stable and Reliable</strong><br/>Ensure that each function is fully tested</td>
+  </tr>
+</table>
+
+</div>
+
+<div align="center">
+
+<img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="400"/>
+
+💝 **If you appreciate this effort, please show your support with a ⭐ Star.**
+
+</div>
 
 ## 🚀 What's New
 
@@ -68,6 +94,10 @@ pnpm dev
 ```
 
 Then open http://localhost:8000 in your browser to access the service
+
+🎉 **Successfully running?** If you like the clean setup of this template, don’t forget to show some support!
+
+[![Star this repo](https://img.shields.io/badge/⭐-Star%20this%20repo-yellow?style=flat&logo=github)](https://github.com/pdsuwwz/nextjs-nextra-starter)
 
 ## Using Shadcn UI Components
 
@@ -122,9 +152,23 @@ Open [`src/components/ui/alert.tsx`](src/components/ui/alert.tsx) to modify the 
 
 > Tips: In most cases, the default styles provided by `Shadcn UI` are sufficient to meet requirements without additional modifications
 
-## 🌹 Support
+## 🐱 A Word from the Heart
 
-If you like this project or find it useful, you can click the [`Star`](https://github.com/pdsuwwz/nextjs-nextra-starter) button in the top right to show your support. Your support is our motivation for continuous improvement, thank you! ^\_^
+<div align="center">
+
+If you've made it this far and still haven't starred the repo, then all I can say is...
+
+<img src="https://media.giphy.com/media/l0HlKrB02QY0f1mbm/giphy.gif" width="500"/>
+
+**Pretty please, drop a ⭐ Star!** 🥺👉👈
+
+Right now, my bug count is still higher than my star count 😭
+
+<a href="https://github.com/pdsuwwz/nextjs-nextra-starter">
+<img src="https://img.shields.io/badge/Discovered%20with%20care-Drop%20a%20Star%20%E2%AD%90-orange?style=for-the-badge&logo=github&logoColor=white" alt="Give a Star"/>
+</a>
+
+</div>
 
 ## 🌟 Related Projects
 
