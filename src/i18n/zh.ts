@@ -82,6 +82,10 @@ export default {
       question: '如何获得技术支持或帮助？',
       answer: '如果在使用过程中遇到问题，请通过 GitHub @pdsuwwz 与我们联系。',
     },
+    {
+      question: '🐒 作者现在最缺什么？',
+      answer: '缺 Star！⭐️ 每天写代码写到秃头，就指望这点 Star 安慰我受伤的心灵... 社畜的快乐就这么简单！',
+    },
   ],
 
 }
