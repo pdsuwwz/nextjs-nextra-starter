@@ -82,6 +82,10 @@ export default {
       question: 'How can I get technical support or help?',
       answer: 'If you encounter any issues while using the template, please contact us via GitHub @pdsuwwz.',
     },
+    {
+      question: '🐒 What does the author need most right now?',
+      answer: 'Stars! ⭐️ Coding till bald, just need Stars to heal my soul... 🥺',
+    },
   ],
 
 }
