@@ -176,6 +176,7 @@ Here are some projects that developers and teams are using, referencing, or insp
 
 | Project Name                                                           | Description                                                                                                                       |
 | ---------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| [ClaudeCode101](https://www.claudecode101.com)                         | A Chinese tutorial site for Claude Code, featuring best practices and hands-on guides.                                            |
 | [EdgeOne Saas Starter](https://github.com/TencentEdgeOne/saas-starter) | [The fastest way to create and deploy your SaaS product with EdgeOne and Tencent Cloud](https://saas-starter-docs.edgeone.app/en) |
 | [Talking Web3](https://talkingweb3.io/en)                              | A Web3 project accelerator dedicated to creating outstanding Web3 projects.                                                       |
 | [CodeCrack](https://www.codecrack.cn/en)                               | A free and in-depth interview preparation website helping developers improve their technical skills and prepare for interviews.   |
