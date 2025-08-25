@@ -4,6 +4,8 @@ export default {
     title: '👋 嘿，欢迎来到 Next.js 起步模板!',
     more: '了解详情',
   },
+  pageTitle: '当前页面',
+  backToTop: '返回顶部',
 
   badgeTitle: '轻量级、开箱即用 🎉',
   featureSupport: `🔥 现在支持 {{feature}}！`,

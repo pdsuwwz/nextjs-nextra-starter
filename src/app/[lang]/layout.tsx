@@ -156,6 +156,10 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
               { locale: 'en', name: 'English' },
               { locale: 'zh', name: '简体中文' },
             ]}
+            toc={{
+              backToTop: t('backToTop'),
+              title: t('pageTitle'),
+            }}
             pageMap={pageMap}
             feedback={{ content: '' }}
           // ... Your additional layout options
