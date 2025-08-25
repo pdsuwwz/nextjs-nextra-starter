@@ -4,6 +4,8 @@ export default {
     title: '👋 Hey there! Welcome to the Next.js Starter.',
     more: 'Check it out',
   },
+  pageTitle: 'On This Page',
+  backToTop: 'Back to top',
 
   badgeTitle: 'Lightweight & Easy 🎉',
   featureSupport: `🔥 Now with {{feature}} support!`,
