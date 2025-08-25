@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 
+
 import type { ReactNode } from 'react'
 
 import type { I18nLangAsyncProps, I18nLangKeys } from '@/i18n'
 import { GoogleAnalytics } from '@next/third-parties/google'
-
 import Script from 'next/script'
 import { Footer, LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
@@ -87,13 +87,16 @@ const BaiduTrack = () => {
 }
 
 
-interface Props {
-  children: ReactNode
-  params: Promise<{ lang: I18nLangKeys }>
-}
+// interface Props {
+//   children: ReactNode
+//   params: Promise<{ lang: I18nLangKeys }>
+// }
 
-export default async function RootLayout({ children, params }: Props) {
-  const { lang } = await params
+export default async function RootLayout({ children, params }: LayoutProps<'/[lang]'>) {
+  const getterParams = await params
+
+  const { lang } = getterParams as { lang: I18nLangKeys }
+
   const dictionary = await getDictionary(lang)
   const pageMap = await getPageMap(lang)
 
