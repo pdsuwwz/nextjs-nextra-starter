@@ -151,7 +151,14 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
                 <CustomFooter />
               </Footer>
             )}
-            search={<Search />}
+            search={(
+              <Search
+                placeholder={t('search.placeholder')}
+                emptyResult={t('search.noResults')}
+                errorText={t('search.errorText')}
+                loading={t('search.loading')}
+              />
+            )}
             i18n={[
               { locale: 'en', name: 'English' },
               { locale: 'zh', name: '简体中文' },

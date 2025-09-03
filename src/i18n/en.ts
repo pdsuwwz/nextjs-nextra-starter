@@ -7,6 +7,13 @@ export default {
   pageTitle: 'On This Page',
   backToTop: 'Back to top',
 
+  search: {
+    placeholder: 'Search...',
+    noResults: 'No results found',
+    errorText: 'Search error',
+    loading: 'Loading...',
+  },
+
   badgeTitle: 'Lightweight & Easy 🎉',
   featureSupport: `🔥 Now with {{feature}} support!`,
   lastUpdated: 'Last updated on:',

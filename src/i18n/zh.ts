@@ -7,6 +7,13 @@ export default {
   pageTitle: '当前页面',
   backToTop: '返回顶部',
 
+  search: {
+    placeholder: '搜索...',
+    noResults: '没有搜索结果',
+    errorText: '搜索出错',
+    loading: '加载中...',
+  },
+
   badgeTitle: '轻量级、开箱即用 🎉',
   featureSupport: `🔥 现在支持 {{feature}}！`,
   lastUpdated: '最后更新于:',
