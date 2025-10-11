@@ -35,8 +35,8 @@ export type LocaleKeys = NestedKeyOf<AllLocales>
 type DeepObject = Record<string, any>
 
 // 类型提取给定路径上值的类型
-export type PathValue<T, P extends string> =
-  P extends `${infer Key}.${infer Rest}`
+export type PathValue<T, P extends string>
+  = P extends `${infer Key}.${infer Rest}`
     ? Key extends keyof T
       ? PathValue<T[Key], Rest>
       : never

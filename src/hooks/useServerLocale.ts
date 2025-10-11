@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks-extra/no-unnecessary-use-prefix */
 import type { AllLocales, I18nLangKeys, LocaleKeys, PathValue } from '@/i18n'
 import { getNestedValue, i18nConfig, interpolateString } from '@/i18n'
 

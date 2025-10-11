@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 
 
-import type { ReactNode } from 'react'
-
 import type { I18nLangAsyncProps, I18nLangKeys } from '@/i18n'
 import { GoogleAnalytics } from '@next/third-parties/google'
 import Script from 'next/script'
