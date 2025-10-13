@@ -131,6 +131,7 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
           disableTransitionOnChange
         >
           <Layout
+            copyPageButton={false}
             banner={
               <CustomBanner lang={lang} />
             }
