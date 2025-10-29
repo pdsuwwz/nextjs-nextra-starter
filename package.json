@@ -20,7 +20,7 @@
   "scripts": {
     "dev": "next dev --turbopack -p 8000",
     "build": "next build",
-    "postbuild": "next-sitemap --config next-sitemap.config.ts && pagefind --site .next/server/app --output-path public/_pagefind",
+    "postbuild": "next-sitemap --config next-sitemap.config.mjs && pagefind --site .next/server/app --output-path public/_pagefind",
     "start": "next start -p 7000",
     "lint": "eslint --fix ."
   },
