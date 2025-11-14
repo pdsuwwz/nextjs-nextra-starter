@@ -6,6 +6,7 @@ export default {
     type: 'page',
     display: 'hidden',
     theme: {
+      copyPage: false,
       timestamp: false,
       layout: 'full',
       toc: false,
@@ -15,6 +16,7 @@ export default {
     type: 'page',
     title: 'This is Introduction',
     theme: {
+      copyPage: false,
       navbar: true,
       toc: false,
     },
