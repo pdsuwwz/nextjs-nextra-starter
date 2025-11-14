@@ -6,6 +6,7 @@ export default {
     type: 'page',
     display: 'hidden',
     theme: {
+      copyPage: false,
       timestamp: false,
       layout: 'full',
       toc: false,
@@ -14,6 +15,7 @@ export default {
   introduction: {
     type: 'page',
     theme: {
+      copyPage: false,
       navbar: true,
       toc: false,
     },
