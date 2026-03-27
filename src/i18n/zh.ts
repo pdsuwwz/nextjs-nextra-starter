@@ -27,6 +27,27 @@ export default {
     darkAria: '切换到深色模式',
   },
 
+  auth: {
+    login: '登录',
+    logout: '退出',
+    brand: 'Nextra 启动模板',
+    welcome: '欢迎回来',
+    email: '邮箱',
+    emailPlaceholder: 'name@example.com',
+    password: '密码',
+    passwordPlaceholder: '请输入密码',
+    submit: '登录',
+    or: '或',
+    google: '使用 Google 登录',
+    googleLoading: '登录中...',
+    loading: '加载中...',
+    backHome: '返回首页',
+    success: '登录成功',
+    invalidEmail: '请输入有效的邮箱地址。',
+    passwordRequired: '请输入密码。',
+    storageError: '无法保存登录状态，请重试。',
+  },
+
   featureList: [
     {
       title: '先进的技术栈',
