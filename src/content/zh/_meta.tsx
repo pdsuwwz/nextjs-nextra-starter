@@ -24,6 +24,18 @@ export default {
     title: '📦 示例代码',
     type: 'page',
   },
+  login: {
+    type: 'page',
+    title: '登录',
+    display: 'hidden',
+    theme: {
+      navbar: false,
+      footer: false,
+      toc: false,
+      layout: 'full',
+      timestamp: false,
+    },
+  },
   upgrade: {
     title: (
       <span className="flex items-center leading-[1]">

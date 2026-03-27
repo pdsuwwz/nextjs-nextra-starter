@@ -1,74 +1,66 @@
-'use client'
+import * as React from "react"
+import { cva, type VariantProps } from "class-variance-authority"
 
-import type { VariantProps } from 'class-variance-authority'
-import { cva } from 'class-variance-authority'
-import * as React from 'react'
-
-import { cn } from '@/lib/utils'
+import { cn } from "@/lib/utils"
 
 const alertVariants = cva(
-  'relative w-full rounded-lg border p-4 [&>svg~*]:pl-7 [&>svg+div]:translate-y-[-3px] [&>svg]:absolute [&>svg]:left-4 [&>svg]:top-4 [&>svg]:text-foreground',
+  "relative grid w-full grid-cols-[0_1fr] items-start gap-y-0.5 rounded-lg border px-4 py-3 text-sm has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] has-[>svg]:gap-x-3 [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
   {
     variants: {
       variant: {
-        default: 'bg-background text-foreground',
+        default: "bg-card text-card-foreground",
         destructive:
-          'border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive',
+          "bg-card text-destructive *:data-[slot=alert-description]:text-destructive/90 [&>svg]:text-current",
       },
     },
     defaultVariants: {
-      variant: 'default',
+      variant: "default",
     },
-  },
+  }
 )
 
-const Alert = ({
+function Alert({
   className,
   variant,
   ...props
-}: React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>) => {
-  const itemRef = React.useRef<HTMLDivElement>(null)
+}: React.ComponentProps<"div"> & VariantProps<typeof alertVariants>) {
   return (
     <div
-      ref={itemRef}
+      data-slot="alert"
       role="alert"
       className={cn(alertVariants({ variant }), className)}
       {...props}
     />
   )
 }
-Alert.displayName = 'Alert'
 
-const AlertTitle = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLHeadingElement>) => {
-  const itemRef = React.useRef<HTMLParagraphElement>(null)
-
-  return (
-    <h5
-      ref={itemRef}
-      className={cn('mb-1 font-medium leading-none tracking-tight', className)}
-      {...props}
-    />
-  )
-}
-AlertTitle.displayName = 'AlertTitle'
-
-const AlertDescription = ({
-  className,
-  ...props
-}: React.HTMLAttributes<HTMLParagraphElement>) => {
-  const itemRef = React.useRef<HTMLParagraphElement>(null)
-
+function AlertTitle({ className, ...props }: React.ComponentProps<"div">) {
   return (
     <div
-      ref={itemRef}
-      className={cn('text-sm [&_p]:leading-relaxed', className)}
+      data-slot="alert-title"
+      className={cn(
+        "col-start-2 line-clamp-1 min-h-4 font-medium tracking-tight",
+        className
+      )}
       {...props}
     />
   )
 }
-AlertDescription.displayName = 'AlertDescription'
 
-export { Alert, AlertDescription, AlertTitle }
+function AlertDescription({
+  className,
+  ...props
+}: React.ComponentProps<"div">) {
+  return (
+    <div
+      data-slot="alert-description"
+      className={cn(
+        "col-start-2 grid justify-items-start gap-1 text-sm text-muted-foreground [&_p]:leading-relaxed",
+        className
+      )}
+      {...props}
+    />
+  )
+}
+
+export { Alert, AlertTitle, AlertDescription }

@@ -2,18 +2,16 @@ import type { Metadata } from 'next'
 
 
 import type { I18nLangAsyncProps, I18nLangKeys } from '@/i18n'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import Script from 'next/script'
+import ThirdPartyScripts from './_components/ThirdPartyScripts'
 import { Footer, LastUpdated, Layout, Navbar } from 'nextra-theme-docs'
 import { Banner, Head, Search } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import { CustomFooter } from '@/components/CustomFooter'
+import { Toaster } from '@/components/ui/sonner'
 import { useServerLocale } from '@/hooks'
-import LocaleToggle from '@/widgets/locale-toggle'
-import ThemeToggle from '@/widgets/theme-toggle'
+import NavbarExtras from '@/widgets/navbar-extras'
 
 import { getDictionary, getDirection } from '../_dictionaries/get-dictionary'
-import { ThemeProvider } from './_components/ThemeProvider'
 import './styles/index.css'
 
 export const metadata = {
@@ -57,32 +55,13 @@ const CustomNavbar = async ({ lang }: I18nLangAsyncProps) => {
       logoLink={`/${lang}`}
       projectLink={repo}
     >
-      <>
-        <LocaleToggle className="max-md:hidden" />
-        <ThemeToggle className="max-md:hidden" />
-      </>
+      <NavbarExtras />
 
     </Navbar>
   )
 }
 
-const BaiduTrack = () => {
-  return (
-    <>
-      <Script strategy="afterInteractive">
-        {`
-          var _hmt = _hmt || [];
-          (function() {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?d5ad5e04e6af914c01767926567602be";
-            var s = document.getElementsByTagName("script")[0]; 
-            s.parentNode.insertBefore(hm, s);
-          })();
-        `}
-      </Script>
-    </>
-  )
-}
+const BaiduTrack = () => null
 
 
 // interface Props {
@@ -123,58 +102,57 @@ export default async function RootLayout({ children, params }: LayoutProps<'/[la
         <link rel="canonical" href={repo} />
       </Head>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          storageKey="starter-theme-provider"
-          disableTransitionOnChange
+        <Layout
+          copyPageButton={false}
+          banner={
+            <CustomBanner lang={lang} />
+          }
+          navbar={
+            <CustomNavbar lang={lang} />
+          }
+          lastUpdated={(
+            <LastUpdated>
+              { t('lastUpdated') }
+            </LastUpdated>
+          )}
+          editLink={null}
+          docsRepositoryBase="https://github.com/pdsuwwz/nextjs-nextra-starter"
+          footer={(
+            <Footer className="bg-background py-5!">
+              <CustomFooter />
+            </Footer>
+          )}
+          search={(
+            <Search
+              placeholder={t('search.placeholder')}
+              emptyResult={t('search.noResults')}
+              errorText={t('search.errorText')}
+              loading={t('search.loading')}
+            />
+          )}
+          i18n={[
+            { locale: 'en', name: 'English' },
+            { locale: 'zh', name: '简体中文' },
+          ]}
+          toc={{
+            backToTop: t('backToTop'),
+            title: t('pageTitle'),
+          }}
+          pageMap={pageMap}
+          feedback={{ content: '' }}
+          nextThemes={{
+            attribute: 'class',
+            defaultTheme: 'system',
+            storageKey: 'starter-theme-provider',
+            disableTransitionOnChange: true,
+          }}
+        // ... Your additional layout options
         >
-          <Layout
-            copyPageButton={false}
-            banner={
-              <CustomBanner lang={lang} />
-            }
-            navbar={
-              <CustomNavbar lang={lang} />
-            }
-            lastUpdated={(
-              <LastUpdated>
-                { t('lastUpdated') }
-              </LastUpdated>
-            )}
-            editLink={null}
-            docsRepositoryBase="https://github.com/pdsuwwz/nextjs-nextra-starter"
-            footer={(
-              <Footer className="bg-background py-5!">
-                <CustomFooter />
-              </Footer>
-            )}
-            search={(
-              <Search
-                placeholder={t('search.placeholder')}
-                emptyResult={t('search.noResults')}
-                errorText={t('search.errorText')}
-                loading={t('search.loading')}
-              />
-            )}
-            i18n={[
-              { locale: 'en', name: 'English' },
-              { locale: 'zh', name: '简体中文' },
-            ]}
-            toc={{
-              backToTop: t('backToTop'),
-              title: t('pageTitle'),
-            }}
-            pageMap={pageMap}
-            feedback={{ content: '' }}
-          // ... Your additional layout options
-          >
-            {children}
-          </Layout>
-        </ThemeProvider>
+          {children}
+        </Layout>
+        <Toaster position="top-center" />
+        <ThirdPartyScripts />
       </body>
-      <GoogleAnalytics gaId="G-VCR6017LB8" />
       <BaiduTrack />
     </html>
   )

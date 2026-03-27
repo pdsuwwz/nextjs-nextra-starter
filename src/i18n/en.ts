@@ -27,6 +27,27 @@ export default {
     darkAria: 'Switch to dark mode',
   },
 
+  auth: {
+    login: 'Login',
+    logout: 'Logout',
+    brand: 'Nextra Starter',
+    welcome: 'Welcome back',
+    email: 'Email',
+    emailPlaceholder: 'you@example.com',
+    password: 'Password',
+    passwordPlaceholder: '••••••••',
+    submit: 'Sign in',
+    or: 'or',
+    google: 'Continue with Google',
+    googleLoading: 'Signing in...',
+    loading: 'Loading...',
+    backHome: 'Back to home',
+    success: 'Login successful',
+    invalidEmail: 'Please enter a valid email address.',
+    passwordRequired: 'Please enter your password.',
+    storageError: 'Unable to save login state. Please try again.',
+  },
+
   featureList: [
     {
       title: 'Advanced Tech Stack',
