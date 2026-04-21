@@ -131,10 +131,8 @@
 .nextra-navbar-blur {
   @apply bg-background;
 }
-.nextra-mobile-nav {
-  .nextra-sidebar-footer {
-    @apply mx-0 px-4;
-  }
+.nextra-mobile-nav .nextra-sidebar-footer {
+  @apply mx-0 px-4;
 }
 
 @keyframes heartbeat {
