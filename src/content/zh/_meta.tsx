@@ -24,6 +24,16 @@ export default {
     title: '📦 示例代码',
     type: 'page',
   },
+  'ai-demo': {
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      copyPage: false,
+      toc: false,
+      timestamp: false,
+      layout: 'full',
+    },
+  },
   login: {
     type: 'page',
     title: '登录',

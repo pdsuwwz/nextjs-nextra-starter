@@ -117,5 +117,164 @@ export default {
       answer: 'Stars! ⭐️ Coding till bald, just need Stars to heal my soul... 🥺',
     },
   ],
+  aiDemo: {
+    nav: {
+      product: 'PulseOps',
+      tryDemo: 'Try Demo',
+      bookCall: 'Book a Call',
+      startTrial: 'Start Free Trial',
+    },
+    hero: {
+      title: 'Automate repetitive ops and ship more every week',
+      subtitle: 'PulseOps helps indie builders and small teams turn SOPs into AI workflows in hours, not weeks.',
+      tryDemo: 'Try Demo',
+      bookCall: 'Book a Call',
+      startTrial: 'Start Free Trial',
+      trust: 'No credit card required · Setup in 10 minutes',
+    },
+    socialProofTitle: 'Social proof',
+    socialProof: {
+      logos: ['Marlow Ke', 'Nina Zhou', 'Evan Lin', 'Luca Ren', 'Iris Qiao'],
+      stats: [
+        { value: '41%', label: 'Average time saved on ops tasks' },
+        { value: '3.6x', label: 'Faster handoff from idea to execution' },
+        { value: '12 hrs', label: 'Recovered weekly focus time per team' },
+      ],
+    },
+    featureTitle: 'Core capabilities built for lean teams',
+    features: [
+      {
+        title: 'Workflow Builder',
+        description: 'Design multi-step automations with plain language prompts and reusable blocks.',
+      },
+      {
+        title: 'AI Task Routing',
+        description: 'Automatically assign tasks to the right person, tool, or bot based on context.',
+      },
+      {
+        title: 'Knowledge Sync',
+        description: 'Connect docs, tickets, and chat history to give your automations live context.',
+      },
+      {
+        title: 'Approval Guardrails',
+        description: 'Set review checkpoints before high-impact actions are executed.',
+      },
+      {
+        title: 'Execution Analytics',
+        description: 'Track success rates, cycle time, and ROI with clear operational dashboards.',
+      },
+      {
+        title: 'Template Library',
+        description: 'Launch proven workflow templates for support, growth, and product ops.',
+      },
+    ],
+    howItWorksTitle: 'How it works',
+    steps: [
+      {
+        title: '1. Map your process',
+        description: 'Upload SOPs or describe a process in plain English.',
+      },
+      {
+        title: '2. Generate and customize',
+        description: 'PulseOps creates a draft automation that your team can refine in minutes.',
+      },
+      {
+        title: '3. Run with control',
+        description: 'Launch workflows with approvals, alerts, and measurable outcomes.',
+      },
+    ],
+    useCasesTitle: 'Common use cases',
+    useCases: [
+      {
+        title: 'Customer support triage',
+        description: 'Classify, summarize, and route tickets before an agent opens them.',
+      },
+      {
+        title: 'Weekly growth reporting',
+        description: 'Collect data, generate summaries, and post actionable updates automatically.',
+      },
+      {
+        title: 'Product launch ops',
+        description: 'Coordinate assets, checklists, and approvals across tools without manual follow-up.',
+      },
+    ],
+    demoTitle: 'Product demo preview',
+    demoDescription: 'A single command center to monitor runs, detect bottlenecks, and trigger next actions.',
+    testimonialsTitle: 'What customers say',
+    testimonials: [
+      {
+        quote: 'We replaced scattered Zap workflows with one clear system. Operations finally feel predictable.',
+        name: 'Maya Chen',
+        role: 'Founder, Marlow Ke Team',
+      },
+      {
+        quote: 'Our four-person team now runs onboarding and support flows with enterprise-level discipline.',
+        name: 'Daniel Ross',
+        role: 'Head of Ops, Evan Lin Studio',
+      },
+    ],
+    pricingTitle: 'Simple pricing that scales with your team',
+    pricingSubtitle: 'Version A emphasizes ROI, cost clarity, and predictable automation throughput.',
+    plans: [
+      {
+        name: 'Starter',
+        price: '$29/mo',
+        description: 'For solo builders validating repeatable workflows.',
+        points: ['Up to 5 active workflows', 'Basic analytics', 'Email support'],
+        cta: 'Try Demo',
+      },
+      {
+        name: 'Growth',
+        price: '$99/mo',
+        description: 'For small teams running cross-functional automations.',
+        points: ['Up to 25 active workflows', 'Approval guardrails', 'Priority support'],
+        cta: 'Start Free Trial',
+        highlight: true,
+      },
+      {
+        name: 'Scale',
+        price: 'Custom',
+        description: 'For teams with advanced security and volume needs.',
+        points: ['Unlimited workflows', 'SSO + audit logs', 'Dedicated success manager'],
+        cta: 'Book a Call',
+      },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      {
+        question: 'How fast can we launch our first workflow?',
+        answer: 'Most teams launch one production workflow in less than a day.',
+      },
+      {
+        question: 'Do we need engineering support to use PulseOps?',
+        answer: 'No. Non-technical operators can build and maintain most workflows.',
+      },
+      {
+        question: 'Can we keep approvals for sensitive actions?',
+        answer: 'Yes. You can require manual approvals at any step in a workflow.',
+      },
+      {
+        question: 'What integrations are available?',
+        answer: 'PulseOps supports popular tools for docs, tickets, chat, and data storage.',
+      },
+      {
+        question: 'Is there a free trial?',
+        answer: 'Yes. You can start a free trial without entering a credit card.',
+      },
+    ],
+    finalCta: {
+      title: 'Cut busywork, increase shipping velocity',
+      description: 'See how much repetitive work your team can automate in the first week.',
+      primary: 'Start Free Trial',
+      secondary: 'Book a Call',
+    },
+    footer: {
+      productName: 'PulseOps',
+      copyright: '© 2026 PulseOps. All rights reserved.',
+      contactTitle: 'Contact',
+      contactEmail: 'hello@pulseops.ai',
+      contactPhone: '+1 (415) 555-0138',
+    },
+  },
 
 }
