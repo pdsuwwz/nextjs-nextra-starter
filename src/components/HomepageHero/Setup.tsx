@@ -117,7 +117,7 @@ export function SetupHero(props: Props) {
             <Button
               asChild
               size="lg"
-              className="font-bold group max-sm:w-[100%]"
+              className="font-bold group text-white hover:text-white dark:text-white dark:hover:text-white max-sm:w-[100%]"
             >
               <Link
                 href={`/${currentLocale}/introduction`}

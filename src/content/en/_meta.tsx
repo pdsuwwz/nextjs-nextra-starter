@@ -33,6 +33,16 @@ export default {
       timestamp: false,
     },
   },
+  'ai-demo': {
+    type: 'page',
+    display: 'hidden',
+    theme: {
+      copyPage: false,
+      toc: false,
+      timestamp: false,
+      layout: 'full',
+    },
+  },
   docs: {
     title: '📦 Some Examples',
     type: 'page',

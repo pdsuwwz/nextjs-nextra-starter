@@ -13,9 +13,10 @@ English | [中文](README.md)
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/nextjs-nextra-starter?color=466fe8)](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/LICENSE)
 
-⚡️ Fast Template Starter - React v19 + Next.js + Nextra (v4) + TypeScript + TailwindCSS (v4) + Shadcn UI
+🔥 A Next.js 16 starter for indie developers and small teams: Tailwind CSS 4, React 19, Nextra 4, TypeScript, Shadcn UI, Radix UI, Aceternity UI, Sass, ESLint 9, Iconify, and i18n multilingual support. Built for Blog, Docs, and AI SaaS landing pages with responsive layout, dark mode, login page, and frontend auth examples. Deploy-ready for Vercel and Netlify.
 
 - [🚀 Live Demo](https://nextjs-nextra.netlify.app/en)
+- [🤖 AI Demo Landing Page](https://nextjs-nextra.netlify.app/en/ai-demo)
 - [✨ Alternative address 1](https://nextjs-nextra-starter-green.vercel.app/en)
 - [✨ Alternative address 2](https://nextra.likemashang.com/en)
 
@@ -53,12 +54,23 @@ English | [中文](README.md)
 
 ## 🎉 Features
 
-- ⚡️ **Next.js + TypeScript**: Efficient React framework with type safety support
-- 🎨 **Tailwind CSS (v4)**: Atomic CSS for quickly building custom, responsive UI interfaces
-- 🧩 **Shadcn UI**: Highly customizable UI component collection with no additional dependencies
-- 📚 **Nextra v4**: Next.js-based static site generator optimized for documentation
-- 🛠️ **ESLint**: Unified coding style and best practices
-- ⛅ **Lightweight Design**: Streamlined project setup focused on content creation
+- ⚡️ **Next.js 16 + React 19 + TypeScript**: Modern core stack with strong type safety and developer productivity
+- 🎨 **Tailwind CSS v4 + Sass**: Utility-first styling with scalable style organization
+- 📚 **Nextra v4 (content-driven)**: Great fit for docs, knowledge bases, and blogs
+- 🧩 **Shadcn UI + Radix UI + Aceternity UI**: Composable UI system for fast product page building
+- 🌍 **i18n multilingual support**: Built-in structure for localized content and routes
+- 🌙 **Dark mode + responsive design**: Consistent UX across desktop and mobile
+- 🔐 **Login page + frontend auth examples**: Practical auth flow reference for rapid integration
+- 🖼️ **Iconify icon support**: Unified icon strategy with low integration cost
+- 🛠️ **ESLint v9**: Consistent code quality and team-friendly standards
+- 🚀 **Deployment-ready**: Works smoothly with Vercel / Netlify
+
+## 🎯 Use Cases
+
+- Personal blog (Blog Starter Template)
+- Developer docs and product documentation sites
+- AI product websites and conversion-focused SaaS landing pages
+- Personal projects and small team product showcases
 
 ## Prerequisites
 

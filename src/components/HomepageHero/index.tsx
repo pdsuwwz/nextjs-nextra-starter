@@ -3,6 +3,7 @@
 import { useTheme } from 'nextra-theme-docs'
 import { useMemo } from 'react'
 import Marquee from 'react-fast-marquee'
+import EntryCard from '@/components/AIDemoLanding/EntryCard'
 import { PanelParticles } from '@/components/PanelParticles'
 import ScrollProgressBar from '@/components/ScrollProgressBar'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion'
@@ -65,6 +66,7 @@ export default function HomepageHero() {
       <ScrollProgressBar />
       <PanelParticles />
       <SetupHero />
+      <EntryCard />
       {/* <div className="relative top-[-18px] mb-[-10px] flex justify-center py-[0px] z-2">
         <a
           href="https://nextjs.org"
