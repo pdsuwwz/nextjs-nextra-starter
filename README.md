@@ -13,9 +13,10 @@
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/nextjs-nextra-starter?color=466fe8)](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/LICENSE)
 
-⚡️ 快速模板 Starter Template - React v19 + Next.js + Nextra (v4) + TypeScript + TailwindCSS (v4) + Shadcn UI
+🔥 面向独立开发者与小团队的 Next.js 16 启动模板：集成 Tailwind CSS 4、React 19、Nextra 4、TypeScript、Shadcn UI、Radix UI、Aceternity UI、Sass、ESLint 9、Iconify 与 i18n 多语言。覆盖 Blog、Docs、AI SaaS Landing Page 等核心场景，支持响应式布局、暗黑模式、登录页与前端鉴权示例，兼顾快速起步与长期可维护性，支持 Vercel / Netlify 部署。
 
 - [🚀 Live Demo 在线体验](https://nextjs-nextra.netlify.app/zh)
+- [🤖 AI Demo 落地页](https://nextjs-nextra.netlify.app/zh/ai-demo)
 - [✨ 备用地址1](https://nextjs-nextra-starter-green.vercel.app/zh)
 - [✨ 备用地址2](https://nextra.likemashang.com/zh)
 
@@ -53,12 +54,23 @@
 
 ## 🎉 Features
 
-- ⚡️ **Next.js + TypeScript**: 高效的 React 框架和类型安全支持
-- 🎨 **Tailwind CSS (v4)**: 原子化 CSS, 快速构建自定义、响应式界面 UI
-- 🧩 **Shadcn UI**: 高度可定制的 UI 组件集合，无需安装额外依赖
-- 📚 **Nextra v4**: 基于 Next.js 的静态站点生成器，专为文档而优化
-- 🛠️ **ESLint**: 统一编码风格和最佳实践
-- ⛅ **轻量化设计**: 精简项目设置，专注于内容编写
+- ⚡️ **Next.js 16 + React 19 + TypeScript**：现代前端核心栈，类型安全与开发效率兼顾
+- 🎨 **Tailwind CSS v4 + Sass**：支持原子化样式与工程化样式组织，快速构建响应式 UI
+- 📚 **Nextra v4（内容驱动）**：适合文档站、知识库、博客等内容型项目
+- 🧩 **Shadcn UI + Radix UI + Aceternity UI**：可组合、可扩展的组件体系，便于快速搭建产品页面
+- 🌍 **i18n 多语言国际化**：中英文内容组织与路由支持，适配多语言产品站点
+- 🌙 **暗黑模式 + 响应式设计**：覆盖桌面端与移动端体验，支持主题切换
+- 🔐 **登录页与前端鉴权示例**：提供基础鉴权流程参考，便于业务快速接入
+- 🖼️ **Iconify 图标集支持**：统一图标方案，降低图标接入成本
+- 🛠️ **ESLint v9 规范化**：统一代码风格与质量约束，适合团队协作
+- 🚀 **部署友好**：开箱支持 Vercel / Netlify 部署
+
+## 🎯 适用场景
+
+- 个人博客（Blog Starter Template）
+- 技术文档与产品文档站（Docs Site）
+- AI 产品官网与营销落地页（AI SaaS Landing Page）
+- 个人项目主页与小团队产品展示站
 
 ## 前置条件
 
