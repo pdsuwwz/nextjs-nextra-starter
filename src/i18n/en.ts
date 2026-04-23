@@ -87,6 +87,53 @@ export default {
     },
   ],
   featuresDesc: 'Easily build modern applications and kickstart your development process.',
+  homeEnhance: {
+    quickStatsTitle: 'Build once, ship repeatedly',
+    quickStatsDesc: 'A practical base for docs, landing pages, and product frontends that need to look and feel ready.',
+    quickStats: [
+      { value: '15 min', label: 'From clone to first page' },
+      { value: 'v16 + v19', label: 'Next.js and React modern stack' },
+      { value: 'i18n Ready', label: 'English and Chinese routing out of the box' },
+      { value: 'Dark Mode', label: 'Theme system already wired' },
+    ],
+    useCasesTitle: 'Signals that matter',
+    useCases: [
+      {
+        title: 'AI SaaS Landing',
+        description: 'Ship a conversion-focused marketing page with reusable sections and clear CTA rhythm.',
+        tag: 'Growth',
+      },
+      {
+        title: 'Dev Docs Hub',
+        description: 'Publish multilingual docs with Nextra structure, search, and clean content organization.',
+        tag: 'Documentation',
+      },
+      {
+        title: 'Blog + Auth Demo',
+        description: 'Start from a practical baseline that includes login flow and frontend auth examples.',
+        tag: 'Product',
+      },
+    ],
+    flowTitle: 'From setup to shipping',
+    flow: [
+      {
+        title: '1. Initialize',
+        description: 'Install dependencies and run the dev server.',
+      },
+      {
+        title: '2. Customize',
+        description: 'Edit sections, i18n copy, and design tokens.',
+      },
+      {
+        title: '3. Launch',
+        description: 'Deploy to Netlify or Vercel with one command.',
+      },
+    ],
+    ctaTitle: 'Starter-ready scenarios',
+    ctaDescription: 'Use the AI demo page as your reference and turn it into your own product narrative in a few focused iterations.',
+    ctaPrimary: 'View AI Demo',
+    ctaSecondary: 'Read Introduction',
+  },
   faqs: [
     {
       question: 'What frameworks and tech stack does this starter template support?',

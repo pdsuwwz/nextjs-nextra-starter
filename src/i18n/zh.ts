@@ -87,6 +87,53 @@ export default {
     },
   ],
   featuresDesc: '轻松构建现代应用，快速启动您的开发流程',
+  homeEnhance: {
+    quickStatsTitle: '一次搭好，持续交付',
+    quickStatsDesc: '适合文档、落地页与产品前台场景的实用基础模板，开箱就能进入可用状态。',
+    quickStats: [
+      { value: '15 分钟', label: '从克隆到首个页面' },
+      { value: 'v16 + v19', label: 'Next.js 与 React 新版本栈' },
+      { value: 'i18n 就绪', label: '内置中英文路由能力' },
+      { value: '暗黑模式', label: '主题系统已打通' },
+    ],
+    useCasesTitle: '关键指标',
+    useCases: [
+      {
+        title: 'AI SaaS 落地页',
+        description: '快速搭建转化导向的营销页面，模块可复用，CTA 节奏清晰。',
+        tag: '增长',
+      },
+      {
+        title: '开发文档中心',
+        description: '基于 Nextra 结构发布多语言文档，搜索与内容组织开箱即用。',
+        tag: '文档',
+      },
+      {
+        title: '博客 + 登录示例',
+        description: '从可落地的基础骨架开始，内含登录流程与前端鉴权示例。',
+        tag: '产品',
+      },
+    ],
+    flowTitle: '从初始化到上线',
+    flow: [
+      {
+        title: '1. 初始化',
+        description: '安装依赖并启动本地开发环境。',
+      },
+      {
+        title: '2. 定制化',
+        description: '调整模块、国际化文案与设计变量。',
+      },
+      {
+        title: '3. 发布上线',
+        description: '一键部署到 Netlify 或 Vercel。',
+      },
+    ],
+    ctaTitle: '适用场景',
+    ctaDescription: '可直接参考 AI Demo 的信息架构与视觉节奏，快速打磨成你自己的产品叙事页面。',
+    ctaPrimary: '查看 AI Demo',
+    ctaSecondary: '阅读介绍',
+  },
   faqs: [
     {
       question: '这个启动模板支持哪些框架和技术栈？',

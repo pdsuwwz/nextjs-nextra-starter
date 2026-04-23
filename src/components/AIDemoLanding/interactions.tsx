@@ -133,7 +133,8 @@ export function InteractiveDemoPanel({ lang, ctaText }: InteractiveDemoProps) {
   }
 
   return (
-    <div className="rounded-md border border-slate-200 bg-white p-4 dark:border-zinc-700 dark:bg-zinc-900">
+    <div className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 p-4 shadow-[0_14px_40px_-24px_rgba(37,99,235,0.5)] backdrop-blur-sm dark:border-zinc-700/80 dark:bg-zinc-900/80 dark:shadow-[0_16px_44px_-30px_rgba(34,197,94,0.42)] sm:p-5">
+      <div className="pointer-events-none absolute -right-10 -top-10 h-28 w-28 rounded-full bg-[#2563EB]/12 blur-2xl motion-safe:animate-pulse dark:bg-[#22C55E]/10" aria-hidden />
       <div className="mb-4 flex flex-wrap gap-2" role="tablist" aria-label={lang === 'zh' ? '场景切换' : 'Scenario switcher'}>
         {scenarios.map(scenario => (
           <button
@@ -142,10 +143,10 @@ export function InteractiveDemoPanel({ lang, ctaText }: InteractiveDemoProps) {
             role="tab"
             aria-selected={activeScenario.key === scenario.key}
             className={[
-              'rounded-md border px-3 py-1.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 dark:focus-visible:ring-blue-400 dark:focus-visible:ring-offset-zinc-900',
+              'rounded-xl border px-3 py-1.5 text-sm font-medium transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 motion-reduce:transition-none dark:focus-visible:ring-[#60A5FA] dark:focus-visible:ring-offset-zinc-900',
               activeScenario.key === scenario.key
-                ? 'border-[#2563EB] bg-blue-50 text-[#1D4ED8] dark:border-blue-500 dark:bg-blue-500/15 dark:text-blue-300'
-                : 'border-slate-300 bg-white text-slate-700 hover:bg-slate-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800',
+                ? 'border-[#2563EB]/40 bg-gradient-to-r from-blue-50 to-blue-100/70 text-[#1D4ED8] shadow-[0_10px_22px_-20px_rgba(37,99,235,0.9)] dark:border-[#60A5FA]/40 dark:bg-[#1E3A8A]/25 dark:text-[#93C5FD]'
+                : 'border-slate-300/80 bg-white/85 text-slate-700 hover:border-slate-400 hover:bg-white dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-300 dark:hover:border-zinc-600 dark:hover:bg-zinc-900',
             ].join(' ')}
             onClick={() => setActiveKey(scenario.key)}
           >
@@ -154,11 +155,11 @@ export function InteractiveDemoPanel({ lang, ctaText }: InteractiveDemoProps) {
         ))}
       </div>
 
-      <div className="rounded-md border border-slate-200 bg-slate-50 p-4 dark:border-zinc-700 dark:bg-zinc-950">
+      <div className="rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 dark:border-zinc-700/80 dark:bg-zinc-950/70">
         <p className="text-sm text-slate-700 dark:text-zinc-300">{activeScenario.summary}</p>
         <ul className="mt-4 space-y-2">
           {activeScenario.metrics.map(metric => (
-            <li key={metric.label} className="flex items-center justify-between rounded-md border border-slate-200 bg-white px-3 py-2 text-sm dark:border-zinc-700 dark:bg-zinc-900">
+            <li key={metric.label} className="flex items-center justify-between rounded-xl border border-slate-200/80 bg-white/90 px-3 py-2 text-sm shadow-[0_10px_20px_-22px_rgba(15,23,42,0.8)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_28px_-22px_rgba(37,99,235,0.5)] motion-reduce:transition-none dark:border-zinc-700 dark:bg-zinc-900/85">
               <span className="text-slate-600 dark:text-zinc-400">{metric.label}</span>
               <span className="font-semibold text-slate-900 dark:text-zinc-100">{metric.value}</span>
             </li>
@@ -166,7 +167,7 @@ export function InteractiveDemoPanel({ lang, ctaText }: InteractiveDemoProps) {
         </ul>
         <a
           href="#pricing"
-          className="mt-4 inline-flex rounded-md bg-[#2563EB] px-4 py-2.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-400 dark:focus-visible:ring-blue-400 dark:focus-visible:ring-offset-zinc-900"
+          className="mt-5 inline-flex min-h-11 items-center justify-center rounded-xl bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] px-4 py-2.5 text-sm font-semibold text-white shadow-[0_14px_26px_-18px_rgba(37,99,235,0.95)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_20px_32px_-18px_rgba(37,99,235,0.9)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 focus-visible:ring-offset-white motion-reduce:transition-none dark:focus-visible:ring-[#60A5FA] dark:focus-visible:ring-offset-zinc-900"
         >
           {ctaText}
         </a>
@@ -180,12 +181,12 @@ export function InteractivePricingCards({ lang, plans }: InteractivePricingProps
 
   return (
     <>
-      <div className="mb-5 inline-flex rounded-md border border-slate-300 bg-white p-1 dark:border-zinc-700 dark:bg-zinc-900" role="group" aria-label={lang === 'zh' ? '计费周期' : 'Billing cycle'}>
+      <div className="mb-5 inline-flex rounded-xl border border-slate-300/80 bg-white/85 p-1 shadow-[0_10px_18px_-18px_rgba(15,23,42,0.75)] dark:border-zinc-700/80 dark:bg-zinc-900/75" role="group" aria-label={lang === 'zh' ? '计费周期' : 'Billing cycle'}>
         <button
           type="button"
           onClick={() => setCycle('monthly')}
           className={[
-            'rounded-md px-3 py-1.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 dark:focus-visible:ring-blue-400 dark:focus-visible:ring-offset-zinc-900',
+            'rounded-lg px-3 py-1.5 text-sm font-medium transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 motion-reduce:transition-none dark:focus-visible:ring-[#60A5FA] dark:focus-visible:ring-offset-zinc-900',
             cycle === 'monthly' ? 'bg-slate-100 text-slate-900 dark:bg-zinc-800 dark:text-zinc-100' : 'text-slate-600 hover:bg-slate-50 dark:text-zinc-400 dark:hover:bg-zinc-800',
           ].join(' ')}
           aria-pressed={cycle === 'monthly'}
@@ -196,7 +197,7 @@ export function InteractivePricingCards({ lang, plans }: InteractivePricingProps
           type="button"
           onClick={() => setCycle('yearly')}
           className={[
-            'rounded-md px-3 py-1.5 text-sm font-medium transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 dark:focus-visible:ring-blue-400 dark:focus-visible:ring-offset-zinc-900',
+            'rounded-lg px-3 py-1.5 text-sm font-medium transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 motion-reduce:transition-none dark:focus-visible:ring-[#60A5FA] dark:focus-visible:ring-offset-zinc-900',
             cycle === 'yearly' ? 'bg-slate-100 text-slate-900 dark:bg-zinc-800 dark:text-zinc-100' : 'text-slate-600 hover:bg-slate-50 dark:text-zinc-400 dark:hover:bg-zinc-800',
           ].join(' ')}
           aria-pressed={cycle === 'yearly'}
@@ -210,10 +211,16 @@ export function InteractivePricingCards({ lang, plans }: InteractivePricingProps
           <li
             key={plan.name}
             className={[
-              'rounded-md border bg-white p-5 dark:bg-zinc-900',
-              plan.highlight ? 'border-[#2563EB] dark:border-blue-500' : 'border-slate-200 dark:border-zinc-700',
+              'relative overflow-hidden rounded-2xl border bg-white/90 p-5 shadow-[0_14px_30px_-24px_rgba(15,23,42,0.75)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_22px_40px_-28px_rgba(37,99,235,0.5)] motion-reduce:transition-none dark:bg-zinc-900/75 dark:shadow-[0_16px_32px_-28px_rgba(0,0,0,0.85)]',
+              plan.highlight ? 'border-[#2563EB]/45 dark:border-[#60A5FA]/45' : 'border-slate-200/80 dark:border-zinc-700/80',
             ].join(' ')}
           >
+            {plan.highlight && (
+              <span className="mb-3 inline-flex rounded-full border border-[#2563EB]/25 bg-[#2563EB]/10 px-2.5 py-1 text-xs font-semibold text-[#1D4ED8] dark:border-[#60A5FA]/30 dark:bg-[#60A5FA]/15 dark:text-[#93C5FD]">
+                {lang === 'zh' ? '推荐方案' : 'Most Popular'}
+              </span>
+            )}
+            <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#2563EB]/10 blur-3xl dark:bg-[#22C55E]/10" aria-hidden />
             <h3 className="text-lg font-semibold text-slate-900 dark:text-zinc-100">{plan.name}</h3>
             <p className="mt-1 text-2xl font-semibold text-slate-900 dark:text-zinc-100">{formatPlanPrice(plan.price, cycle, lang)}</p>
             <p className="mt-2 text-sm text-slate-700 dark:text-zinc-300">{plan.description}</p>
@@ -228,10 +235,10 @@ export function InteractivePricingCards({ lang, plans }: InteractivePricingProps
             <a
               href="#final-cta"
               className={[
-                'mt-5 inline-flex rounded-md px-4 py-2.5 text-sm font-semibold transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 dark:focus-visible:ring-blue-400 dark:focus-visible:ring-offset-zinc-900',
+                'mt-5 inline-flex min-h-11 items-center justify-center rounded-xl px-4 py-2.5 text-sm font-semibold transition duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#2563EB] focus-visible:ring-offset-2 motion-reduce:transition-none dark:focus-visible:ring-[#60A5FA] dark:focus-visible:ring-offset-zinc-900',
                 plan.highlight
-                  ? 'bg-[#2563EB] text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-400'
-                  : 'border border-slate-300 text-slate-800 hover:bg-slate-50 dark:border-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-800',
+                  ? 'bg-gradient-to-r from-[#2563EB] to-[#1D4ED8] text-white shadow-[0_14px_26px_-18px_rgba(37,99,235,0.95)] hover:-translate-y-0.5 hover:shadow-[0_20px_32px_-18px_rgba(37,99,235,0.9)]'
+                  : 'border border-slate-300/80 bg-white/80 text-slate-800 hover:-translate-y-0.5 hover:bg-white dark:border-zinc-700 dark:bg-zinc-900/80 dark:text-zinc-200 dark:hover:bg-zinc-900',
               ].join(' ')}
             >
               {plan.cta}

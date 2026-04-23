@@ -16,6 +16,8 @@ export function SetupHero(props: Props) {
 
   return (
     <div className={styles.container}>
+      <div className={styles.glowA} aria-hidden />
+      <div className={styles.glowB} aria-hidden />
       <div className={styles.content}>
         <div className={styles.badgeContainer}>
           <a
@@ -48,12 +50,11 @@ export function SetupHero(props: Props) {
         <Link
           href={`/${currentLocale}/upgrade`}
           className={clsx([
-            'bg-linear-to-r from-yellow-400 via-orange-500 to-red-500 text-white shadow-lg',
-            'dark:bg-linear-to-r dark:from-green-400 dark:via-teal-500 dark:to-cyan-500 dark:text-white',
-            'text-sm mt-2 inline-block px-3 py-1 rounded-lg',
-            '[&>span]:font-bold',
-            'animate-pulse',
-            '[animation-duration:2s]',
+            'text-sm mt-3 inline-flex items-center rounded-xl px-3.5 py-1.5',
+            'border border-blue-200/80 bg-blue-50/80 text-blue-700 shadow-[0_12px_22px_-18px_rgba(37,99,235,0.8)] backdrop-blur-sm',
+            'dark:border-cyan-500/25 dark:bg-cyan-500/10 dark:text-cyan-300 dark:shadow-[0_14px_24px_-20px_rgba(34,211,238,0.65)]',
+            '[&>span]:font-semibold',
+            'transition duration-300 hover:-translate-y-0.5',
           ])}
           dangerouslySetInnerHTML={{
             __html: t('featureSupport', {
@@ -117,7 +118,7 @@ export function SetupHero(props: Props) {
             <Button
               asChild
               size="lg"
-              className="font-bold group text-white hover:text-white dark:text-white dark:hover:text-white max-sm:w-[100%]"
+              className="font-semibold group rounded-xl bg-linear-to-r from-blue-600 to-indigo-600 text-white shadow-[0_16px_30px_-20px_rgba(37,99,235,0.9)] transition duration-300 hover:-translate-y-0.5 hover:from-blue-700 hover:to-indigo-700 hover:text-white dark:from-blue-500 dark:to-cyan-500 dark:hover:from-blue-400 dark:hover:to-cyan-400 dark:text-white dark:hover:text-white max-sm:w-[100%]"
             >
               <Link
                 href={`/${currentLocale}/introduction`}
@@ -130,7 +131,7 @@ export function SetupHero(props: Props) {
               asChild
               size="lg"
               variant="secondary"
-              className="font-bold group max-sm:w-[100%]"
+              className="font-semibold group rounded-xl border border-slate-300/80 bg-white/85 shadow-[0_12px_22px_-18px_rgba(15,23,42,0.7)] transition duration-300 hover:-translate-y-0.5 hover:bg-white dark:border-zinc-700 dark:bg-zinc-900/80 dark:hover:bg-zinc-900 max-sm:w-[100%]"
             >
               <Link
                 href="https://github.com/pdsuwwz/nextjs-nextra-starter"
