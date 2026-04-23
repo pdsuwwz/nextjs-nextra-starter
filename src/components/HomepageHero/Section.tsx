@@ -35,9 +35,9 @@ export const Section = (props: Props) => {
           'relative',
           'text-center font-semibold',
           'bg-clip-text text-transparent bg-linear-to-b',
-          'text-3xl md:text-5xl md:leading-tight pt-4',
-          'from-neutral-700 to-black',
-          'dark:from-neutral-800 dark:to-white',
+          'text-3xl md:text-5xl md:leading-tight pt-5',
+          'from-slate-700 to-slate-900',
+          'dark:from-slate-200 dark:to-white',
           `${tallPaddingY ? 'pt-20 pb-10' : ''}`,
         )}
         >
