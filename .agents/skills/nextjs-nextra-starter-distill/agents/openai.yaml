@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next.js Nextra Starter Distill"
+  short_description: "Understand and extend this starter."
+  default_prompt: "Use $nextjs-nextra-starter-distill to understand this starter, plan second-stage development, or migrate its Next.js/Nextra/i18n patterns."

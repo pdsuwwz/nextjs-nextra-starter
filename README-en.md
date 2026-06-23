@@ -20,6 +20,15 @@ English | [中文](README.md)
 - [✨ Alternative address 1](https://nextjs-nextra-starter-green.vercel.app/en)
 - [✨ Alternative address 2](https://nextra.likemashang.com/en)
 
+## 🧪 Project Distillation Skill
+
+This repository includes project-local distillation Skills under `.agents/skills/` to help future maintainers and other projects understand the starter architecture, feature map, implementation patterns, extension points, and migration notes:
+
+- [English Skill](.agents/skills/nextjs-nextra-starter-distill/SKILL.md)
+- [Chinese Skill](.agents/skills/nextjs-nextra-starter-distill-zh/SKILL.md)
+
+When using this project as a reference for similar products, start with [SKILL.md](.agents/skills/nextjs-nextra-starter-distill/SKILL.md), then read the relevant reference file: [architecture.md](.agents/skills/nextjs-nextra-starter-distill/references/architecture.md), [feature-map.md](.agents/skills/nextjs-nextra-starter-distill/references/feature-map.md), [implementation-patterns.md](.agents/skills/nextjs-nextra-starter-distill/references/implementation-patterns.md), [extension-guide.md](.agents/skills/nextjs-nextra-starter-distill/references/extension-guide.md), or [migration-notes.md](.agents/skills/nextjs-nextra-starter-distill/references/migration-notes.md).
+
 ## 🛠️ Maintenance Commitment
 
 <div align="center">

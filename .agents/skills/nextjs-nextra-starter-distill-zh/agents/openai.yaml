@@ -1,0 +1,4 @@
+interface:
+  display_name: "Next.js Nextra Starter 蒸馏"
+  short_description: "中文指南：理解、二次开发、扩展并迁移这个启动模板。"
+  default_prompt: "Use $nextjs-nextra-starter-distill-zh to understand this starter in Chinese, plan second-stage development, or migrate its Next.js/Nextra/i18n patterns."
