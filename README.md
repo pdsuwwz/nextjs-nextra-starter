@@ -20,6 +20,15 @@
 - [✨ 备用地址1](https://nextjs-nextra-starter-green.vercel.app/zh)
 - [✨ 备用地址2](https://nextra.likemashang.com/zh)
 
+## 🧪 项目蒸馏 Skill
+
+本仓库在 `.agents/skills/` 下提供了项目蒸馏 Skill，用于帮助后续二次开发者或其他项目快速理解本模板的架构、功能地图、实现模式、扩展点与迁移注意事项：
+
+- [英文版 Skill](.agents/skills/nextjs-nextra-starter-distill/SKILL.md)
+- [中文版 Skill](.agents/skills/nextjs-nextra-starter-distill-zh/SKILL.md)
+
+如果你希望参考本项目开发类似产品，建议先阅读 [中文版 SKILL.md](.agents/skills/nextjs-nextra-starter-distill-zh/SKILL.md)，再按任务读取 [architecture.md](.agents/skills/nextjs-nextra-starter-distill-zh/references/architecture.md)、[feature-map.md](.agents/skills/nextjs-nextra-starter-distill-zh/references/feature-map.md)、[implementation-patterns.md](.agents/skills/nextjs-nextra-starter-distill-zh/references/implementation-patterns.md)、[extension-guide.md](.agents/skills/nextjs-nextra-starter-distill-zh/references/extension-guide.md) 或 [migration-notes.md](.agents/skills/nextjs-nextra-starter-distill-zh/references/migration-notes.md)。
+
 ## 🛠️ 项目维护承诺
 
 <div align="center">
