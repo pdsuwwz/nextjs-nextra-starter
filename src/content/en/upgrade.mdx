@@ -4,9 +4,9 @@ title: "What's New"
 
 import { Callout } from 'nextra/components'
 
-# 🔥 Major Framework Updates
+# 🔥 Major Framework and Starter Updates
 
-We've completed significant core framework upgrades to bring you a better development experience!
+We've completed significant core framework upgrades and added more complete product examples and second-stage development references to bring you a better development experience!
 
 <Callout emoji={<span className='icon-[ri--alarm-warning-fill]'></span>} type="info">
 Note
@@ -47,6 +47,15 @@ Tailwind CSS v4 has been officially released, introducing several significant im
 
 For more details, please refer to the [Tailwind CSS v4 Upgrade Guide](https://tailwindcss.com/docs/upgrade-guide) and [Tailwind CSS Blog](https://tailwindcss.com/blog/tailwindcss-v4)
 
+### Starter Capability Updates
+
+Beyond framework upgrades, this release also adds starter capabilities that are useful for product validation, AI product showcases, and second-stage development:
+
+- 🤖 **AI SaaS Demo Page**: Added a dedicated [AI Demo landing page](/en/ai-demo) with hero, features, use cases, interactive demo, pricing cards, FAQ, testimonials, and CTAs. It is a practical starting point for AI product websites, SaaS landing pages, and product validation pages.
+- 🌍 **Localized Demo Copy**: AI Demo copy is managed through `src/i18n/ai-demo.ts` and reuses `src/i18n/zh.ts` and `src/i18n/en.ts`, making it easier to replace with real product messaging.
+- 🧩 **Reusable Landing Page Components**: Page components live under `src/components/AIDemoLanding`, with responsive layout, dark mode, and composable section patterns.
+- 🧪 **Project Distillation Skill**: Added [English Skill](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/.agents/skills/nextjs-nextra-starter-distill/SKILL.md) and [Chinese Skill](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/.agents/skills/nextjs-nextra-starter-distill-zh/SKILL.md) to capture the architecture, feature map, implementation patterns, extension points, and migration notes for future projects.
+- 🔐 **Clearer Auth Demo Boundary**: The login page and navbar auth state remain front-end auth examples. Before production, replace them with a real backend, session model, OAuth flow, or third-party auth provider.
 
 ### Migration Tips
 
@@ -56,11 +65,15 @@ For a smooth upgrade process, we recommend:
 2. Check custom component compatibility
 3. Monitor console for any warnings
 4. Follow the official migration guides step by step
+5. If you reuse the AI Demo, replace product copy, CTAs, pricing plans, and interactive demo data first
+6. Before launch, check `SITE_URL`, analytics scripts, auth logic, and deployment environment variables
 
 ### Documentation & Support
 
 - 📘 [Nextra Documentation](https://nextra.site)
 - 🎨 [Tailwind CSS Documentation](https://tailwindcss.com)
+- 🤖 [AI Demo Landing Page](/en/ai-demo)
+- 🧪 [Project Distillation Skill](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/.agents/skills/nextjs-nextra-starter-distill/SKILL.md)
 - 🐞 Found an issue? Open an [Issue](https://github.com/pdsuwwz/nextjs-nextra-starter/issues)
 
 ### Roadmap
