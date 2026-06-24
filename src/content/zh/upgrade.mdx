@@ -4,9 +4,9 @@ title: "新变化"
 
 import { Callout } from 'nextra/components'
 
-# 🔥 重大框架升级
+# 🔥 重大框架升级与模板能力更新
 
-本次完成了核心框架的重大升级，为您带来更好的开发体验！
+本次完成了核心框架的重大升级，并补充了更完整的产品化示例与二次开发参考，为您带来更好的开发体验！
 
 <Callout emoji={<span className='icon-[ri--alarm-warning-fill]'></span>} type="info">
 注意
@@ -45,6 +45,15 @@ Tailwind CSS v4 已正式发布，带来了多个重要的改进和新特性：
 
 更多详情，请参考 [Tailwind CSS v4 升级指南](https://tailwindcss.com/docs/upgrade-guide) 和 [官方博客](https://tailwindcss.com/blog/tailwindcss-v4)。
 
+### 模板能力更新要点
+
+除了框架升级，本次也补充了更适合产品验证、AI 项目展示与后续二次开发的模板能力：
+
+- 🤖 **AI SaaS 示例 Demo**：新增独立的 [AI Demo 落地页](/zh/ai-demo)，覆盖 Hero、功能介绍、使用场景、交互演示、价格卡片、FAQ、用户评价与 CTA，适合作为 AI 产品官网、SaaS Landing Page 或产品验证页的起点。
+- 🌍 **中英文内容接入**：AI Demo 文案通过 `src/i18n/ai-demo.ts` 管理，并复用 `src/i18n/zh.ts` 与 `src/i18n/en.ts`，方便按业务场景替换。
+- 🧩 **可复用 Landing Page 组件**：页面组件集中在 `src/components/AIDemoLanding`，保留响应式布局、暗黑模式和可组合 section 结构。
+- 🧪 **项目蒸馏 Skill**：新增 [中文版 Skill](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/.agents/skills/nextjs-nextra-starter-distill-zh/SKILL.md) 与 [英文版 Skill](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/.agents/skills/nextjs-nextra-starter-distill/SKILL.md)，用于沉淀项目架构、功能地图、实现模式、扩展点与迁移注意事项，方便后续项目借鉴。
+- 🔐 **鉴权示例边界更清晰**：登录页和导航状态仍是前端鉴权演示，适合参考交互流程；上线前请替换为真实后端、Session、OAuth 或第三方鉴权服务。
 
 ### 迁移说明
 
@@ -54,11 +63,15 @@ Tailwind CSS v4 已正式发布，带来了多个重要的改进和新特性：
 2. 检查自定义组件的兼容性
 3. 查看控制台是否有警告信息
 4. 按照官方迁移指南逐步操作
+5. 若复用 AI Demo，请先替换产品文案、CTA、价格方案与交互演示数据
+6. 上线前检查 `SITE_URL`、统计脚本、鉴权逻辑和部署环境变量
 
 ### 文档与支持
 
 - 📘 [Nextra 官方文档](https://nextra.site)
 - 🎨 [Tailwind CSS 官方文档](https://tailwindcss.com)
+- 🤖 [AI Demo 落地页](/zh/ai-demo)
+- 🧪 [项目蒸馏 Skill](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/.agents/skills/nextjs-nextra-starter-distill-zh/SKILL.md)
 - 🐞 遇到问题？欢迎提交 [Issue](https://github.com/pdsuwwz/nextjs-nextra-starter/issues)
 
 ### 后续计划
