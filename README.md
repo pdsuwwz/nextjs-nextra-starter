@@ -13,7 +13,7 @@
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/nextjs-nextra-starter?color=466fe8)](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/LICENSE)
 
-🔥 面向独立开发者与小团队的 Next.js 16 启动模板：集成 Tailwind CSS 4、React 19、Nextra 4、TypeScript、Shadcn UI、Radix UI、Aceternity UI、Sass、ESLint 9、Iconify 与 i18n 多语言。覆盖 Blog、Docs、AI SaaS Landing Page 等核心场景，支持响应式布局、暗黑模式、登录页与前端鉴权示例，兼顾快速起步与长期可维护性，支持 Vercel / Netlify 部署。
+🔥 面向独立开发者与小团队的 Next.js 16 启动模板：集成 Tailwind CSS 4、React 19、Nextra 4、TypeScript、Shadcn UI、Radix UI、Aceternity UI、Sass、ESLint 10、Iconify 与 i18n 多语言。覆盖 Blog、Docs、AI SaaS Landing Page 等核心场景，支持响应式布局、暗黑模式、登录页与前端鉴权示例，兼顾快速起步与长期可维护性，支持 Vercel / Netlify 部署。
 
 - [🚀 Live Demo 在线体验](https://nextjs-nextra.netlify.app/zh)
 - [🤖 AI Demo 落地页](https://nextjs-nextra.netlify.app/zh/ai-demo)
@@ -48,7 +48,7 @@
 
 <div align="center">
 
-<img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="400"/>
+<img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="400" alt="感谢你读到这里"/>
 
 💝 **如果你感受到了这份用心，请用 Star ⭐ 给予支持**
 
@@ -58,6 +58,7 @@
 
 - **Tailwind CSS v4 升级**：全面升级至 Tailwind CSS v4，优化性能并引入新特性。
 - **Nextra v4 重构**：升级至 Nextra v4，提升文档生成效率和开发体验。
+- **依赖版本更新**：同步升级 Next.js 16.3、React 19.3、TypeScript 6、ESLint 10、tsparticles v4 等依赖，并适配相关破坏性变更。
 
 👉 [点击查看详细升级说明](https://nextjs-nextra.netlify.app/zh/upgrade)
 
@@ -71,7 +72,7 @@
 - 🌙 **暗黑模式 + 响应式设计**：覆盖桌面端与移动端体验，支持主题切换
 - 🔐 **登录页与前端鉴权示例**：提供基础鉴权流程参考，便于业务快速接入
 - 🖼️ **Iconify 图标集支持**：统一图标方案，降低图标接入成本
-- 🛠️ **ESLint v9 规范化**：统一代码风格与质量约束，适合团队协作
+- 🛠️ **ESLint v10 规范化**：统一代码风格与质量约束，适合团队协作
 - 🚀 **部署友好**：开箱支持 Vercel / Netlify 部署
 
 ## 🎯 适用场景
@@ -179,7 +180,7 @@ export default function Home() {
 
 如果你看到这里还没有点 Star, 那我只能说...
 
-<img src="https://media.giphy.com/media/l0HlKrB02QY0f1mbm/giphy.gif" width="500"/>
+<img src="https://media.giphy.com/media/l0HlKrB02QY0f1mbm/giphy.gif" width="500" alt="求个 Star"/>
 
 **求求了，给个 Star 吧！** 🥺👉👈
 

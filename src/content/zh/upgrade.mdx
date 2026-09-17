@@ -45,6 +45,17 @@ Tailwind CSS v4 已正式发布，带来了多个重要的改进和新特性：
 
 更多详情，请参考 [Tailwind CSS v4 升级指南](https://tailwindcss.com/docs/upgrade-guide) 和 [官方博客](https://tailwindcss.com/blog/tailwindcss-v4)。
 
+### 依赖版本更新要点
+
+本次同步刷新了全部依赖版本，并完成了新版本带来的破坏性变更适配：
+
+- ⚡️ **Next.js 16.3.5**：与 `@next/third-parties`、`@next/eslint-plugin-next` 保持同版本，避免版本错配。
+- ⚛️ **React 19.3**：同步更新 `react` / `react-dom` 及类型声明 `@types/react`、`@types/react-dom`。
+- 🧠 **TypeScript 6**：移除已废弃的 `baseUrl` 与 `ignoreDeprecations` 配置项，`paths` 直接相对 `tsconfig.json` 解析。
+- 🎨 **Tailwind CSS 4.3 / Radix UI / shadcn 组件**：跟进最新补丁版本（`radix-ui`、`@radix-ui/*`、`postcss`、`sass` 等）。
+- 🧹 **ESLint 10 + @antfu/eslint-config 9**：改用内置的 `nextjs: true` 接入 `@next/next` 规则，替代在扁平配置中已失效的 `extends: ['next/core-web-vitals']`；`@eslint-react/eslint-plugin` 5 将原先的 `react-dom/*`、`react-hooks/*`、`react-hooks-extra/*` 命名空间统一为 `react/*`。
+- 🎆 **tsparticles v4**：`initParticlesEngine` 已移除，改由 `ParticlesProvider` + `Particles` 组合完成引擎初始化。
+
 ### 模板能力更新要点
 
 除了框架升级，本次也补充了更适合产品验证、AI 项目展示与后续二次开发的模板能力：
