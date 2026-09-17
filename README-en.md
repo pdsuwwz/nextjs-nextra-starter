@@ -13,7 +13,7 @@ English | [中文](README.md)
 [![thanks](https://badgen.net/badge/thanks/♥/pink)](https://github.com/pdsuwwz)
 [![License](https://img.shields.io/github/license/pdsuwwz/nextjs-nextra-starter?color=466fe8)](https://github.com/pdsuwwz/nextjs-nextra-starter/blob/main/LICENSE)
 
-🔥 A Next.js 16 starter for indie developers and small teams: Tailwind CSS 4, React 19, Nextra 4, TypeScript, Shadcn UI, Radix UI, Aceternity UI, Sass, ESLint 9, Iconify, and i18n multilingual support. Built for Blog, Docs, and AI SaaS landing pages with responsive layout, dark mode, login page, and frontend auth examples. Deploy-ready for Vercel and Netlify.
+🔥 A Next.js 16 starter for indie developers and small teams: Tailwind CSS 4, React 19, Nextra 4, TypeScript, Shadcn UI, Radix UI, Aceternity UI, Sass, ESLint 10, Iconify, and i18n multilingual support. Built for Blog, Docs, and AI SaaS landing pages with responsive layout, dark mode, login page, and frontend auth examples. Deploy-ready for Vercel and Netlify.
 
 - [🚀 Live Demo](https://nextjs-nextra.netlify.app/en)
 - [🤖 AI Demo Landing Page](https://nextjs-nextra.netlify.app/en/ai-demo)
@@ -48,7 +48,7 @@ When using this project as a reference for similar products, start with [SKILL.m
 
 <div align="center">
 
-<img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="400"/>
+<img src="https://media.giphy.com/media/a5viI92PAF89q/giphy.gif" width="400" alt="Thanks for reading"/>
 
 💝 **If you appreciate this effort, please show your support with a ⭐ Star.**
 
@@ -58,6 +58,7 @@ When using this project as a reference for similar products, start with [SKILL.m
 
 - **Tailwind CSS v4 Upgrade**: Fully upgraded to Tailwind CSS v4, optimizing performance and introducing new features.
 - **Nextra v4 Refactoring**: Upgraded to Nextra v4, enhancing document generation efficiency and development experience.
+- **Dependency Refresh**: Bumped Next.js 16.3, React 19.3, TypeScript 6, ESLint 10, tsparticles v4 and more, with the related breaking changes adapted.
 
 👉 [Click to view detailed upgrade notes](https://nextjs-nextra.netlify.app/en/upgrade)
 
@@ -71,7 +72,7 @@ When using this project as a reference for similar products, start with [SKILL.m
 - 🌙 **Dark mode + responsive design**: Consistent UX across desktop and mobile
 - 🔐 **Login page + frontend auth examples**: Practical auth flow reference for rapid integration
 - 🖼️ **Iconify icon support**: Unified icon strategy with low integration cost
-- 🛠️ **ESLint v9**: Consistent code quality and team-friendly standards
+- 🛠️ **ESLint v10**: Consistent code quality and team-friendly standards
 - 🚀 **Deployment-ready**: Works smoothly with Vercel / Netlify
 
 ## 🎯 Use Cases
@@ -179,7 +180,7 @@ Open [`src/components/ui/alert.tsx`](src/components/ui/alert.tsx) to modify the 
 
 If you've made it this far and still haven't starred the repo, then all I can say is...
 
-<img src="https://media.giphy.com/media/l0HlKrB02QY0f1mbm/giphy.gif" width="500"/>
+<img src="https://media.giphy.com/media/l0HlKrB02QY0f1mbm/giphy.gif" width="500" alt="Please give the project a star"/>
 
 **Pretty please, drop a ⭐ Star!** 🥺👉👈
 

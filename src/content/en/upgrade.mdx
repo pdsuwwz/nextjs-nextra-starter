@@ -47,6 +47,17 @@ Tailwind CSS v4 has been officially released, introducing several significant im
 
 For more details, please refer to the [Tailwind CSS v4 Upgrade Guide](https://tailwindcss.com/docs/upgrade-guide) and [Tailwind CSS Blog](https://tailwindcss.com/blog/tailwindcss-v4)
 
+### Dependency Refresh Highlights
+
+Every dependency has been refreshed in this release, together with the adaptations required by their breaking changes:
+
+- ⚡️ **Next.js 16.3.5**: Kept in lockstep with `@next/third-parties` and `@next/eslint-plugin-next` to avoid version mismatches.
+- ⚛️ **React 19.3**: `react` / `react-dom` and their type declarations (`@types/react`, `@types/react-dom`) were bumped together.
+- 🧠 **TypeScript 6**: Removed the deprecated `baseUrl` and `ignoreDeprecations` options; `paths` now resolves relative to `tsconfig.json` directly.
+- 🎨 **Tailwind CSS 4.3 / Radix UI / shadcn components**: Latest patch releases adopted (`radix-ui`, `@radix-ui/*`, `postcss`, `sass`, and more).
+- 🧹 **ESLint 10 + @antfu/eslint-config 9**: The built-in `nextjs: true` option now wires up `@next/next` rules, replacing `extends: ['next/core-web-vitals']`, which is not supported by flat config; `@eslint-react/eslint-plugin` 5 flattens the former `react-dom/*`, `react-hooks/*` and `react-hooks-extra/*` namespaces into `react/*`.
+- 🎆 **tsparticles v4**: `initParticlesEngine` is gone; engine setup now happens through `ParticlesProvider` + `Particles`.
+
 ### Starter Capability Updates
 
 Beyond framework upgrades, this release also adds starter capabilities that are useful for product validation, AI product showcases, and second-stage development:

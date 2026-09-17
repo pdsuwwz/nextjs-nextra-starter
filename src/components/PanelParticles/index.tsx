@@ -1,20 +1,22 @@
 'use client'
 
 import type { ISourceOptions } from '@tsparticles/engine'
-import Particles, { initParticlesEngine } from '@tsparticles/react'
+import type { ParticlesPluginRegistrar } from '@tsparticles/react'
+import { Particles, ParticlesProvider } from '@tsparticles/react'
 import { useTheme } from 'nextra-theme-docs'
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { loadFull } from 'tsparticles'
+
+/**
+ * The provider requires the init callback to be stable across the app lifecycle,
+ * so it is declared at module scope instead of being re-created on every render.
+ */
+const initParticlesEngine: ParticlesPluginRegistrar = async (engine) => {
+  await loadFull(engine)
+}
 
 const PanelParticles = () => {
   const { resolvedTheme } = useTheme()
-
-  useEffect(() => {
-    initParticlesEngine(async (engine) => {
-      await loadFull(engine)
-    })
-  }, [])
-
 
   const options = useMemo<ISourceOptions>(
     () => ({
@@ -81,10 +83,12 @@ const PanelParticles = () => {
   )
 
   return (
-    <Particles
-      className="max-sm:hidden pointer-events-none"
-      options={options}
-    />
+    <ParticlesProvider init={initParticlesEngine}>
+      <Particles
+        className="max-sm:hidden pointer-events-none"
+        options={options}
+      />
+    </ParticlesProvider>
   )
 }
 
